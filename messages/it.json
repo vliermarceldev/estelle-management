@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "about": "Chi Siamo",
+    "whatWeDo": "Cosa Facciamo",
+    "models": "Modelle",
+    "blog": "Academy",
+    "apply": "Candidati",
+    "applyMobile": "Candidati",
+    "selectLang": "Seleziona Lingua"
+  },
+  "hero": {
+    "scroll": "Scopri"
+  },
+  "home": {
+    "process": {
+      "title": "Verso la Vetta",
+      "subtitle": "Costruisci il tuo impero in tre passi.",
+      "steps": [
+        {
+          "title": "Candidatura & Audit",
+          "desc": "Analizziamo il tuo potenziale. Se hai quel 'certo non so che', sviluppiamo un piano di battaglia."
+        },
+        {
+          "title": "Onboarding & Setup",
+          "desc": "Il nostro team prende il comando. Tech, account, strategia. Ottieni un ambiente di gestione completo."
+        },
+        {
+          "title": "Scaling",
+          "desc": "Aumentiamo il traffico. Chat 24/7, marketing e ottimizzazione a pieno regime."
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Tutto ciò che devi sapere.",
+      "items": [
+        {
+          "q": "Devo lasciare il mio lavoro?",
+          "a": "No. Il nostro obiettivo è darti tempo. Facciamo il lavoro duro così puoi gestire entrambe le cose."
+        },
+        {
+          "q": "Ci sono costi iniziali?",
+          "a": "No. Lavoriamo al 100% basandoci sui risultati. Guadagniamo solo se tu guadagni."
+        },
+        {
+          "q": "Rimango anonima?",
+          "a": "Assolutamente. Usamos Geoblocking e ci assicuriamo che nessuno della tua cerchia privata veda i tuoi contenuti."
+        }
+      ]
+    }
+  },
+  "stats": {
+    "ranking": "Strategie Top 0.1%",
+    "support": "Supporto Personale",
+    "discretion": "Discrezione Assoluta"
+  },
+  "about": {
+    "title": "Su Estelle",
+    "headline": "Ridefiniamo il Management.",
+    "text1": "Estelle è stata fondata con una visione chiara: offrire ai talenti un palcoscenico che va oltre la creazione di contenuti.",
+    "text2": "Il nostro team di esperti lavora dietro le quinte mentre tu sei sotto i riflettori.",
+    "signature": "Il Team Estelle",
+    "backToHome": "Torna alla Home"
+  },
+  "whatWeDoPage": {
+    "title": "Cosa Facciamo",
+    "subtitle": "Trasformiamo il talento in un impero.",
+    "introHeadline": "Il successo su OnlyFans non è un caso.",
+    "introText": "È il risultato di dati, psicologia e duro lavoro. Gestiamo l'intera parte commerciale così puoi concentrarti sui tuoi contenuti.",
+    "services": [
+      {
+        "title": "Chatting High-Performance 24/7",
+        "description": "I nostri chatter sono professionisti delle vendite. Rispondiamo in pochi secondi. Massimizziamo il Lifetime Value (LTV) di ogni abbonato."
+      },
+      {
+        "title": "Traffico Virale & Funnels",
+        "description": "Il contenuto è re, ma la portata è regina. Gestiamo la tua presenza su TikTok e Instagram con strategie aggressive."
+      },
+      {
+        "title": "Audit dell'Account",
+        "description": "Analizziamo i tuoi numeri senza pietà. Prezzi PPV, messaggi di benvenuto: troviamo le perdite di fatturato e le chiudiamo."
+      }
+    ],
+    "whyUsTitle": "Il Vantaggio Estelle",
+    "whyUs": [
+      {
+        "title": "100% Libertà",
+        "description": "Tu crei i contenuti, noi facciamo il resto. Niente stress con messaggi o piani di pubblicazione."
+      },
+      {
+        "title": "Crescita Basata sui Dati",
+        "description": "Non tiriamo a indovinare. Analizziamo i tassi di clic e conversione quotidianamente per aumentare i tuoi guadagni."
+      },
+      {
+        "title": "Legale & Protezione",
+        "description": "Scansioniamo il web per leak. Il nostro team legale invia richieste di rimozione DMCA immediate."
+      },
+      {
+        "title": "Nessun Rischio",
+        "description": "Guadagniamo solo se tu guadagni. La tua crescita è la nostra unica motivazione."
+      }
+    ],
+    "cta": "Pronta per la Top 0.1%?"
+  },
+  "modelsPage": {
+    "title": "Le Nostre Modelle",
+    "subtitle": "Esclusività ed Eleganza. Scopri i talenti che si fidano di Estelle.",
+    "backToHome": "Torna alla Home"
+  },
+  "blog": {
+    "title": "Academy",
+    "subtitle": "Strategie, consigli e approfondimenti per i creatori di OnlyFans.",
+    "readMore": "Leggi l'articolo",
+    "back": "Torna alla panoramica",
+    "published": "Pubblicato il"
+  },
+  "services": {
+    "title": "La Nostra Esperienza",
+    "card1": {
+      "title": "Crescita & Scaling",
+      "desc": "Strategie basate sui dati per aumentare la tua portata e i ricavi in modo sostenibile."
+    },
+    "card2": {
+      "title": "Protezione & Privacy",
+      "desc": "Proteggiamo i tuoi contenuti tramite rimozioni DMCA e manteniamo il tuo anonimato."
+    },
+    "card3": {
+      "title": "Brand Management",
+      "desc": "Costruzione di un personal brand esclusivo che lega i fan a lungo termine."
+    }
+  },
+  "contact": {
+    "title": "Candidatura",
+    "subtitle": "Pronta per il prossimo livello? Compila il modulo e ti contatteremo presto.",
+    "name": "Nome",
+    "email": "Email",
+    "instagram": "Instagram / Handle",
+    "age": "Età",
+    "status": "Stato Attuale",
+    "selectStatus": "Si prega di selezionare...",
+    "statusOptions": {
+      "beginner": "Principiante (Nessun Account)",
+      "experienced": "Esperta ($1k - $10k/mese)",
+      "pro": "Top Creator ($10k+/mese)"
+    },
+    "photo": "Foto (Viso & Corpo)",
+    "photoHelp": "Per favore 4 foto: Viso (Fronte, Lato, Angolo) & Corpo Intero. Max 25MB.",
+    "photoPlaceholder": "Seleziona foto (Max 4)",
+    "message": "Messaggio",
+    "messagePlaceholder": "Parlaci brevemente di te e dei tuoi obiettivi...",
+    "confirmAdult": "Confermo di avere almeno 18 anni e acconsento ad essere contattata.",
+    "submit": "Invia Candidatura",
+    "privacy": "Inviando, accetti che i tuoi dati vengano trattati per il contatto.",
+    "successTitle": "Candidatura inviata!",
+    "successText": "Grazie. Abbiamo ricevuto la tua candidatura e ti risponderemo il prima possibile.",
+    "back": "Torna al modulo"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "slogan": "Ridefiniamo il Management.",
+    "cols": {
+      "company": "Azienda",
+      "legal": "Legale",
+      "socials": "Connettiti"
+    },
+    "links": {
+      "home": "Home",
+      "about": "Chi Siamo",
+      "whatWeDo": "Cosa Facciamo",
+      "models": "Modelle",
+      "apply": "Candidati",
+      "impressum": "Impressum",
+      "privacy": "Privacy"
+    }
+  },
+  "impressumPage": {
+    "title": "Impressum",
+    "subtitle": "Informazioni Legali",
+    "sections": []
+  },
+  "privacyPage": {
+    "title": "Informativa sulla Privacy",
+    "subtitle": "Informazioni sulla protezione dei dati",
+    "updated": "Ultimo aggiornamento: Gennaio 2026",
+    "intro": "La protezione dei tuoi dati personali è importante per noi.",
+    "sections": []
+  },
+  "notFound": {
+    "title": "Pagina non trovata"
+  }
+}

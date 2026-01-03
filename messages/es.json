@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "about": "Sobre Nosotros",
+    "whatWeDo": "Qué Hacemos",
+    "models": "Modelos",
+    "blog": "Academy",
+    "apply": "Aplicar",
+    "applyMobile": "Aplicar Ahora",
+    "selectLang": "Seleccionar Idioma"
+  },
+  "hero": {
+    "scroll": "Descubrir"
+  },
+  "home": {
+    "process": {
+      "title": "Camino a la Cima",
+      "subtitle": "Construye tu imperio en tres pasos.",
+      "steps": [
+        {
+          "title": "Aplicación y Auditoría",
+          "desc": "Analizamos tu potencial. Si tienes ese 'algo especial', desarrollamos un plan de batalla."
+        },
+        {
+          "title": "Onboarding y Configuración",
+          "desc": "Nuestro equipo se encarga. Tecnología, cuentas, estrategia. Obtienes un entorno de gestión completo."
+        },
+        {
+          "title": "Escalado",
+          "desc": "Aumentamos el tráfico. Chat 24/7, marketing y optimización funcionando a toda velocidad."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber.",
+      "items": [
+        {
+          "q": "¿Debo renunciar a mi trabajo?",
+          "a": "No. Nuestro objetivo es darte tiempo. Nosotros hacemos el trabajo duro para que puedas compaginar ambos, hasta que OnlyFans sea tu ingreso principal."
+        },
+        {
+          "q": "¿Hay costos iniciales?",
+          "a": "No. Trabajamos 100% a base de resultados. Invertimos nuestro tiempo y recursos en ti y solo ganamos cuando tú ganas."
+        },
+        {
+          "q": "¿Permanezco anónima?",
+          "a": "Absolutamente. Usamos Geoblocking (bloqueo de tu país/ciudad) y aseguramos que nadie de tu entorno privado vea tu contenido."
+        }
+      ]
+    }
+  },
+  "stats": {
+    "ranking": "Estrategias Top 0.1%",
+    "support": "Soporte Personal",
+    "discretion": "Discreción Absoluta"
+  },
+  "about": {
+    "title": "Sobre Estelle",
+    "headline": "Redefiniendo el Management.",
+    "text1": "Estelle fue fundada con una visión clara: ofrecer a los talentos un escenario que va más allá de la creación de contenido.",
+    "text2": "Nuestro equipo de expertos en marketing, legal y construcción de marca trabaja en segundo plano mientras tú estás en el centro de atención.",
+    "signature": "El Equipo Estelle",
+    "backToHome": "Volver al Inicio"
+  },
+  "whatWeDoPage": {
+    "title": "Qué Hacemos",
+    "subtitle": "Convertimos talento en un imperio.",
+    "introHeadline": "El éxito en OnlyFans no es casualidad.",
+    "introText": "Es el resultado de datos, psicología y trabajo duro. Nosotros construimos negocios. Manejamos toda la parte comercial para que puedas concentrarte en tu contenido.",
+    "services": [
+      {
+        "title": "Chatting de Alto Rendimiento 24/7",
+        "description": "Nuestros chatters son profesionales de ventas. Respondemos en segundos, todo el día. Maximizamos el valor de vida (LTV) de cada suscriptor."
+      },
+      {
+        "title": "Tráfico Viral y Embudos",
+        "description": "El contenido es el rey, pero el alcance es la reina. Gestionamos tu presencia en TikTok, Instagram y Apps de citas con estrategias agresivas."
+      },
+      {
+        "title": "Auditoría de Cuenta",
+        "description": "Analizamos tus números sin piedad. Precios PPV, mensajes de bienvenida: encontramos las fugas de ingresos y las cerramos."
+      }
+    ],
+    "whyUsTitle": "La Ventaja Estelle",
+    "whyUs": [
+      {
+        "title": "100% Libertad",
+        "description": "Tú creas el contenido, nosotros hacemos el resto. Sin estrés por mensajes ni horarios de publicación."
+      },
+      {
+        "title": "Crecimiento Basado en Datos",
+        "description": "No adivinamos. Analizamos tasas de clics y conversión diariamente para aumentar tus ingresos semana tras semana."
+      },
+      {
+        "title": "Legal y Protección",
+        "description": "Escaneamos la web automáticamente en busca de filtraciones. Nuestro equipo legal envía takedowns DMCA inmediatos."
+      },
+      {
+        "title": "Sin Riesgo",
+        "description": "Solo ganamos dinero si tú ganas dinero. Tu crecimiento es nuestra única motivación."
+      }
+    ],
+    "cta": "¿Lista para el Top 0.1%?"
+  },
+  "modelsPage": {
+    "title": "Nuestras Modelos",
+    "subtitle": "Exclusividad y Elegancia. Descubre los talentos que confían en Estelle.",
+    "backToHome": "Volver al Inicio"
+  },
+  "blog": {
+    "title": "Academy",
+    "subtitle": "Estrategias, consejos y perspectivas para creadores de OnlyFans.",
+    "readMore": "Leer artículo",
+    "back": "Volver al resumen",
+    "published": "Publicado el"
+  },
+  "services": {
+    "title": "Nuestra Experiencia",
+    "card1": {
+      "title": "Crecimiento y Escalado",
+      "desc": "Estrategias basadas en datos para aumentar tu alcance e ingresos de manera sostenible."
+    },
+    "card2": {
+      "title": "Protección y Privacidad",
+      "desc": "Protegemos tu contenido mediante takedowns DMCA y mantenemos tu anonimato."
+    },
+    "card3": {
+      "title": "Gestión de Marca",
+      "desc": "Construcción de una marca personal exclusiva que fideliza a los fans a largo plazo."
+    }
+  },
+  "contact": {
+    "title": "Aplicación",
+    "subtitle": "¿Lista para el siguiente nivel? Completa el formulario y te contactaremos pronto.",
+    "name": "Nombre",
+    "email": "Email",
+    "instagram": "Instagram / Usuario",
+    "age": "Edad",
+    "status": "Estado Actual",
+    "selectStatus": "Por favor selecciona...",
+    "statusOptions": {
+      "beginner": "Principiante (Sin cuenta)",
+      "experienced": "Experimentada ($1k - $10k/mes)",
+      "pro": "Top Creator ($10k+/mes)"
+    },
+    "photo": "Fotos (Rostro y Cuerpo)",
+    "photoHelp": "Por favor 4 fotos: Rostro (Frente, Perfil, Ángulo) y Cuerpo Entero. Máx 25MB.",
+    "photoPlaceholder": "Seleccionar fotos (Máx 4)",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntanos brevemente sobre ti y tus objetivos...",
+    "confirmAdult": "Confirmo que tengo al menos 18 años y acepto ser contactada.",
+    "submit": "Enviar Aplicación",
+    "privacy": "Al enviar, aceptas que tus datos sean procesados para el contacto.",
+    "successTitle": "¡Aplicación enviada!",
+    "successText": "Gracias. Hemos recibido tu aplicación y nos pondremos en contacto contigo lo antes posible.",
+    "back": "Volver al formulario"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "slogan": "Redefiniendo el Management.",
+    "cols": {
+      "company": "Compañía",
+      "legal": "Legal",
+      "socials": "Conectar"
+    },
+    "links": {
+      "home": "Inicio",
+      "about": "Sobre Nosotros",
+      "whatWeDo": "Qué Hacemos",
+      "models": "Modelos",
+      "apply": "Aplicar",
+      "impressum": "Aviso Legal",
+      "privacy": "Privacidad"
+    }
+  },
+  "impressumPage": {
+    "title": "Aviso Legal",
+    "subtitle": "Información Legal",
+    "sections": []
+  },
+  "privacyPage": {
+    "title": "Política de Privacidad",
+    "subtitle": "Información sobre protección de datos",
+    "updated": "Última actualización: Enero 2026",
+    "intro": "La protección de sus datos personales es importante para nosotros.",
+    "sections": []
+  },
+  "notFound": {
+    "title": "Página no encontrada"
+  }
+}

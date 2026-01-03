@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "about": "À Propos",
+    "whatWeDo": "Ce Que Nous Faisons",
+    "models": "Modèles",
+    "blog": "Academy",
+    "apply": "Postuler",
+    "applyMobile": "Postuler",
+    "selectLang": "Choisir la langue"
+  },
+  "hero": {
+    "scroll": "Découvrir"
+  },
+  "home": {
+    "process": {
+      "title": "Vers le Sommet",
+      "subtitle": "Bâtissez votre empire en trois étapes.",
+      "steps": [
+        {
+          "title": "Candidature & Audit",
+          "desc": "Nous analysons votre potentiel. Si vous avez ce 'petit quelque chose', nous élaborons un plan de bataille."
+        },
+        {
+          "title": "Intégration & Configuration",
+          "desc": "Notre équipe prend le relais. Tech, comptes, stratégie. Vous obtenez un environnement de gestion complet."
+        },
+        {
+          "title": "Mise à l'échelle",
+          "desc": "Nous augmentons le trafic. Chat 24/7, marketing et optimisation tournent à plein régime."
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Tout ce que vous devez savoir.",
+      "items": [
+        {
+          "q": "Dois-je quitter mon emploi ?",
+          "a": "Non. Notre but est de vous donner du temps. Nous faisons le travail difficile pour que vous puissiez gérer les deux."
+        },
+        {
+          "q": "Y a-t-il des frais initiaux ?",
+          "a": "Non. Nous travaillons à 100% à la performance. Nous n'investissons que si vous gagnez."
+        },
+        {
+          "q": "Je reste anonyme ?",
+          "a": "Absolument. Nous utilisons le géoblocage pour que personne de votre entourage privé ne voie votre contenu."
+        }
+      ]
+    }
+  },
+  "stats": {
+    "ranking": "Stratégies Top 0.1%",
+    "support": "Support Personnel",
+    "discretion": "Discrétion Absolue"
+  },
+  "about": {
+    "title": "À Propos d'Estelle",
+    "headline": "Redéfinir le Management.",
+    "text1": "Estelle a été fondée avec une vision claire : offrir aux talents une scène qui va au-delà de la création de contenu.",
+    "text2": "Notre équipe d'experts travaille en arrière-plan pendant que vous êtes sous les projecteurs.",
+    "signature": "L'Équipe Estelle",
+    "backToHome": "Retour à l'accueil"
+  },
+  "whatWeDoPage": {
+    "title": "Ce Que Nous Faisons",
+    "subtitle": "Nous transformons le talent en empire.",
+    "introHeadline": "Le succès sur OnlyFans n'est pas un hasard.",
+    "introText": "C'est le résultat de données, de psychologie et de travail acharné. Nous gérons toute la partie commerciale pour que vous puissiez vous concentrer sur votre contenu.",
+    "services": [
+      {
+        "title": "Chat Haute Performance 24/7",
+        "description": "Nos chatters sont des pros de la vente. Nous répondons en quelques secondes. Nous maximisons la valeur à vie (LTV) de chaque abonné."
+      },
+      {
+        "title": "Trafic Viral & Tunnels",
+        "description": "Le contenu est roi, mais la portée est reine. Nous gérons votre présence sur TikTok et Instagram avec des stratégies agressives."
+      },
+      {
+        "title": "Audit de Compte",
+        "description": "Nous analysons vos chiffres sans pitié. Prix PPV, messages de bienvenue – nous trouvons les fuites de revenus et les comblons."
+      }
+    ],
+    "whyUsTitle": "L'Avantage Estelle",
+    "whyUs": [
+      {
+        "title": "100% Liberté",
+        "description": "Vous créez le contenu, nous faisons le reste. Pas de stress avec les messages, pas de planning de publication."
+      },
+      {
+        "title": "Croissance Basée sur les Données",
+        "description": "Nous analysons les taux de clics et de conversion quotidiennement pour augmenter vos revenus semaine après semaine."
+      },
+      {
+        "title": "Juridique & Protection",
+        "description": "Nous scannons le web pour les fuites. Notre équipe juridique envoie des demandes de retrait DMCA immédiates."
+      },
+      {
+        "title": "Aucun Risque",
+        "description": "Nous ne gagnons de l'argent que si vous en gagnez. Votre croissance est notre seule motivation."
+      }
+    ],
+    "cta": "Prête pour le Top 0.1% ?"
+  },
+  "modelsPage": {
+    "title": "Nos Modèles",
+    "subtitle": "Exclusivité et Élégance. Découvrez les talents qui font confiance à Estelle.",
+    "backToHome": "Retour à l'accueil"
+  },
+  "blog": {
+    "title": "Academy",
+    "subtitle": "Stratégies, conseils et idées pour les créateurs OnlyFans.",
+    "readMore": "Lire l'article",
+    "back": "Retour à l'aperçu",
+    "published": "Publié le"
+  },
+  "services": {
+    "title": "Notre Expertise",
+    "card1": {
+      "title": "Croissance & Échelle",
+      "desc": "Stratégies basées sur les données pour augmenter durablement votre portée et vos revenus."
+    },
+    "card2": {
+      "title": "Protection & Confidentialité",
+      "desc": "Nous protégeons votre contenu via des retraits DMCA et préservons votre anonymat."
+    },
+    "card3": {
+      "title": "Gestion de Marque",
+      "desc": "Construction d'une marque personnelle exclusive qui fidélise les fans à long terme."
+    }
+  },
+  "contact": {
+    "title": "Candidature",
+    "subtitle": "Prête pour le niveau supérieur ? Remplissez le formulaire et nous vous contacterons.",
+    "name": "Nom",
+    "email": "Email",
+    "instagram": "Instagram / Pseudo",
+    "age": "Âge",
+    "status": "Statut Actuel",
+    "selectStatus": "Veuillez sélectionner...",
+    "statusOptions": {
+      "beginner": "Débutante (Pas de compte)",
+      "experienced": "Expérimentée (1k$ - 10k$/mois)",
+      "pro": "Top Créatrice (10k$+/mois)"
+    },
+    "photo": "Photos (Visage & Corps)",
+    "photoHelp": "S'il vous plaît 4 photos : Visage (Face, Profil, Angle) & Corps Entier. Max 25MB.",
+    "photoPlaceholder": "Sélectionner des photos (Max 4)",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-nous brièvement de vous et de vos objectifs...",
+    "confirmAdult": "Je confirme avoir au moins 18 ans et j'accepte d'être contactée.",
+    "submit": "Envoyer la candidature",
+    "privacy": "En envoyant, vous acceptez que vos données soient traitées pour la prise de contact.",
+    "successTitle": "Candidature envoyée !",
+    "successText": "Merci. Nous avons bien reçu votre candidature et reviendrons vers vous dès que possible.",
+    "back": "Retour au formulaire"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "slogan": "Redéfinir le Management.",
+    "cols": {
+      "company": "Entreprise",
+      "legal": "Légal",
+      "socials": "Connecter"
+    },
+    "links": {
+      "home": "Accueil",
+      "about": "À Propos",
+      "whatWeDo": "Ce Que Nous Faisons",
+      "models": "Modèles",
+      "apply": "Postuler",
+      "impressum": "Mentions Légales",
+      "privacy": "Confidentialité"
+    }
+  },
+  "impressumPage": {
+    "title": "Mentions Légales",
+    "subtitle": "Informations Juridiques",
+    "sections": []
+  },
+  "privacyPage": {
+    "title": "Politique de Confidentialité",
+    "subtitle": "Informations sur la protection des données",
+    "updated": "Dernière mise à jour : Janvier 2026",
+    "intro": "La protection de vos données personnelles est importante pour nous.",
+    "sections": []
+  },
+  "notFound": {
+    "title": "Page non trouvée"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "about": "Sobre Nós",
+    "whatWeDo": "O Que Fazemos",
+    "models": "Modelos",
+    "blog": "Academy",
+    "apply": "Aplicar",
+    "applyMobile": "Aplicar Agora",
+    "selectLang": "Selecionar Idioma"
+  },
+  "hero": {
+    "scroll": "Descubrir"
+  },
+  "home": {
+    "process": {
+      "title": "Caminho para o Topo",
+      "subtitle": "Construa seu império em três passos.",
+      "steps": [
+        {
+          "title": "Aplicação e Auditoria",
+          "desc": "Analisamos seu potencial. Se você tem aquele 'algo a mais', desenvolvemos um plano de batalha."
+        },
+        {
+          "title": "Onboarding e Setup",
+          "desc": "Nossa equipe assume. Tecnologia, contas, estratégia. Você recebe um ambiente de gestão completo."
+        },
+        {
+          "title": "Escala",
+          "desc": "Aumentamos o tráfego. Chat 24/7, marketing e otimização a todo vapor."
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Tudo o que você precisa saber.",
+      "items": [
+        {
+          "q": "Preciso sair do meu emprego?",
+          "a": "Não. Nosso objetivo é te dar tempo. Nós fazemos o trabalho duro para que você possa conciliar ambos."
+        },
+        {
+          "q": "Existem custos iniciais?",
+          "a": "Não. Trabalhamos 100% baseados em resultados. Ganhamos apenas se você ganhar."
+        },
+        {
+          "q": "Continuo anônima?",
+          "a": "Absolutamente. Usamos Geoblocking e garantimos que ninguém do seu círculo privado veja seu conteúdo."
+        }
+      ]
+    }
+  },
+  "stats": {
+    "ranking": "Estratégias Top 0.1%",
+    "support": "Suporte Pessoal",
+    "discretion": "Discrição Absoluta"
+  },
+  "about": {
+    "title": "Sobre Estelle",
+    "headline": "Redefinindo o Management.",
+    "text1": "Estelle foi fundada com uma visão clara: oferecer aos talentos um palco que vai além da criação de conteúdo.",
+    "text2": "Nossa equipe de especialistas trabalha nos bastidores enquanto você está sob os holofotes.",
+    "signature": "A Equipe Estelle",
+    "backToHome": "Voltar ao Início"
+  },
+  "whatWeDoPage": {
+    "title": "O Que Fazemos",
+    "subtitle": "Transformamos talento em império.",
+    "introHeadline": "O sucesso no OnlyFans não é por acaso.",
+    "introText": "É o resultado de dados, psicologia e trabalho duro. Gerenciamos toda a parte comercial para que você possa focar no seu conteúdo.",
+    "services": [
+      {
+        "title": "Chat de Alta Performance 24/7",
+        "description": "Nossos chatters são profissionais de vendas. Respondemos em segundos. Maximizamos o Lifetime Value (LTV) de cada assinante."
+      },
+      {
+        "title": "Tráfego Viral e Funis",
+        "description": "Conteúdo é rei, mas alcance é rainha. Gerenciamos sua presença no TikTok e Instagram com estratégias agressivas."
+      },
+      {
+        "title": "Auditoria de Conta",
+        "description": "Analisamos seus números sem piedade. Preços PPV, mensagens de boas-vindas: encontramos as falhas de receita e as fechamos."
+      }
+    ],
+    "whyUsTitle": "A Vantagem Estelle",
+    "whyUs": [
+      {
+        "title": "100% Liberdade",
+        "description": "Você cria o conteúdo, nós fazemos o resto. Sem estresse com mensagens ou cronogramas de postagem."
+      },
+      {
+        "title": "Crescimento Baseado em Dados",
+        "description": "Não adivinhamos. Analisamos taxas de cliques e conversão diariamente para aumentar seus ganhos."
+      },
+      {
+        "title": "Legal e Proteção",
+        "description": "Escaneamos a web por vazamentos. Nossa equipe legal envia pedidos de remoção DMCA imediatos."
+      },
+      {
+        "title": "Sem Risco",
+        "description": "Ganhamos dinheiro apenas se você ganhar. Seu crescimento é nossa única motivação."
+      }
+    ],
+    "cta": "Pronta para o Top 0.1%?"
+  },
+  "modelsPage": {
+    "title": "Nossas Modelos",
+    "subtitle": "Exclusividade e Elegância. Descubra os talentos que confiam na Estelle.",
+    "backToHome": "Voltar ao Início"
+  },
+  "blog": {
+    "title": "Academy",
+    "subtitle": "Estratégias, dicas e insights para criadores do OnlyFans.",
+    "readMore": "Ler artigo",
+    "back": "Voltar à visão geral",
+    "published": "Publicado em"
+  },
+  "services": {
+    "title": "Nossa Expertise",
+    "card1": {
+      "title": "Crescimento e Escala",
+      "desc": "Estratégias baseadas em dados para aumentar seu alcance e receita de forma sustentável."
+    },
+    "card2": {
+      "title": "Proteção e Privacidade",
+      "desc": "Protegemos seu conteúdo via remoções DMCA e mantemos seu anonimato."
+    },
+    "card3": {
+      "title": "Gestão de Marca",
+      "desc": "Construção de uma marca pessoal exclusiva que fideliza fãs a longo prazo."
+    }
+  },
+  "contact": {
+    "title": "Aplicação",
+    "subtitle": "Pronta para o próximo nível? Preencha o formulário e entraremos em contato.",
+    "name": "Nome",
+    "email": "Email",
+    "instagram": "Instagram / Usuário",
+    "age": "Idade",
+    "status": "Status Atual",
+    "selectStatus": "Por favor selecione...",
+    "statusOptions": {
+      "beginner": "Iniciante (Sem Conta)",
+      "experienced": "Experiente ($1k - $10k/mês)",
+      "pro": "Top Creator ($10k+/mês)"
+    },
+    "photo": "Fotos (Rosto e Corpo)",
+    "photoHelp": "Por favor 4 fotos: Rosto (Frente, Lado, Ângulo) e Corpo Inteiro. Máx 25MB.",
+    "photoPlaceholder": "Selecionar fotos (Máx 4)",
+    "message": "Mensagem",
+    "messagePlaceholder": "Conte-nos brevemente sobre você e seus objetivos...",
+    "confirmAdult": "Confirmo que tenho pelo menos 18 anos e concordo em ser contatada.",
+    "submit": "Enviar Aplicação",
+    "privacy": "Ao enviar, você concorda que seus dados sejam processados para contato.",
+    "successTitle": "Aplicação enviada!",
+    "successText": "Obrigado. Recebemos sua aplicação e entraremos em contato o mais breve possível.",
+    "back": "Voltar ao formulário"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "slogan": "Redefinindo o Management.",
+    "cols": {
+      "company": "Empresa",
+      "legal": "Legal",
+      "socials": "Conectar"
+    },
+    "links": {
+      "home": "Início",
+      "about": "Sobre Nós",
+      "whatWeDo": "O Que Fazemos",
+      "models": "Modelos",
+      "apply": "Aplicar",
+      "impressum": "Aviso Legal",
+      "privacy": "Privacidade"
+    }
+  },
+  "impressumPage": {
+    "title": "Aviso Legal",
+    "subtitle": "Informações Legais",
+    "sections": []
+  },
+  "privacyPage": {
+    "title": "Política de Privacidade",
+    "subtitle": "Informações sobre proteção de dados",
+    "updated": "Última atualização: Janeiro 2026",
+    "intro": "A proteção dos seus dados pessoais é importante para nós.",
+    "sections": []
+  },
+  "notFound": {
+    "title": "Página não encontrada"
+  }
+}

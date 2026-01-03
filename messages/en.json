@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "about": "About",
+    "whatWeDo": "What We Do",
+    "models": "Models",
+    "blog": "Academy",
+    "apply": "Apply Now",
+    "applyMobile": "Apply Now",
+    "selectLang": "Select Language"
+  },
+  "blog": {
+    "title": "Academy",
+    "subtitle": "Strategies, Tips & Insights for OnlyFans Creators.",
+    "readMore": "Read Article",
+    "back": "Back to overview",
+    "published": "Published on"
+  },
+  "hero": {
+    "scroll": "Discover"
+  },
+  "home": {
+    "process": {
+      "title": "Path to the Top",
+      "subtitle": "Build your empire in three steps.",
+      "steps": [
+        {
+          "title": "Application & Audit",
+          "desc": "We analyze your potential. If you have that 'certain something', we develop a battle plan."
+        },
+        {
+          "title": "Onboarding & Setup",
+          "desc": "Our team takes over. Tech, accounts, strategy. You get a complete management environment."
+        },
+        {
+          "title": "Scaling",
+          "desc": "We turn up the traffic. 24/7 chatting, marketing, and optimization running at full speed."
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Everything you need to know.",
+      "items": [
+        {
+          "q": "Do I have to quit my job?",
+          "a": "No. Our goal is to give you time. We do the hard work so you can manage both – until OnlyFans becomes your main income."
+        },
+        {
+          "q": "Are there upfront costs?",
+          "a": "No. We work 100% performance-based. We invest our time and resources in you and only earn when you earn."
+        },
+        {
+          "q": "Do I remain anonymous?",
+          "a": "Absolutely. We use Geoblocking (blocking your country/city) and ensure no one from your private circle sees your content."
+        },
+        {
+          "q": "How fast will I see results?",
+          "a": "With our strategy, most models see a significant revenue increase in the first month. The full effect usually kicks in after 3 months."
+        },
+        {
+          "q": "How are earnings paid out?",
+          "a": "OnlyFans pays directly to your bank account. We invoice you monthly for our share. You always keep full control over your finances."
+        },
+        {
+          "q": "Do I need experience?",
+          "a": "No. We love building new talent. Your personality and motivation are more important than a perfect portfolio or experience."
+        },
+        {
+          "q": "Do I own the pictures?",
+          "a": "Yes, 100%. You retain all rights to your content. We only use it for marketing during our collaboration."
+        },
+        {
+          "q": "What do I need to start?",
+          "a": "A smartphone with a good camera, internet access, and a valid ID for verification. We take care of strategy and tech."
+        },
+        {
+          "q": "What about taxes?",
+          "a": "You are self-employed. We recommend specialized tax advisors from our network, but filing is your responsibility."
+        },
+        {
+          "q": "Can I cancel anytime?",
+          "a": "We work with fair contracts. Collaboration is based on trust. We generally have short notice periods so both sides remain flexible."
+        }
+      ]
+    }
+  },
+  "stats": {
+    "ranking": "Top 0.1% Strategies",
+    "support": "Personal Support",
+    "discretion": "Absolute Discretion"
+  },
+  "about": {
+    "title": "About Estelle",
+    "headline": "Redefining Management.",
+    "text1": "Estelle was founded with a clear vision: To offer talents a stage that goes beyond content creation. We see creators as entrepreneurs.",
+    "text2": "Our team of experts in marketing, law, and brand-building works in the background while you stand in the spotlight. Your vision is our mission.",
+    "signature": "The Estelle Team",
+    "backToHome": "Back to Home"
+  },
+  "whatWeDoPage": {
+    "title": "What We Do",
+    "subtitle": "We turn talent into an empire.",
+    "introHeadline": "Success on OnlyFans is no accident.",
+    "introText": "It is the result of data, psychology, and hard work. Most agencies just post pictures. We build businesses. We handle the entire business side – from fan acquisition to upselling – so you can focus fully on your content and your life.",
+    "services": [
+      {
+        "title": "24/7 High-Performance Chatting",
+        "description": "Our chatters are not assistants, they are sales pros. We reply within seconds, around the clock. Through psychologically optimized scripts, we build deep bonds with your fans and maximize the Lifetime Value (LTV) of every subscriber."
+      },
+      {
+        "title": "Viral Traffic & Funnels",
+        "description": "Content is King, but Reach is Queen. We manage your presence on TikTok, Instagram, and Dating Apps with aggressive strategies. We funnel 'High-Net-Worth' users directly to you."
+      },
+      {
+        "title": "Account Audit & Optimization",
+        "description": "We analyze your existing numbers mercilessly. PPV prices, welcome messages, pin structures – we find the revenue gaps currently costing you thousands and close them immediately."
+      }
+    ],
+    "whyUsTitle": "The Estelle Advantage",
+    "whyUs": [
+      {
+        "title": "100% Freedom",
+        "description": "You create the content, we do the rest. No stress with messages, no posting schedule. You enjoy your life."
+      },
+      {
+        "title": "Data-Driven Growth",
+        "description": "We don't guess. We analyze click rates, retention, and conversion rates daily to increase your earnings week after week."
+      },
+      {
+        "title": "Legal & Protection",
+        "description": "We automatically scan the web for leaks. Our legal team sends immediate DMCA takedowns to protect your content and brand."
+      },
+      {
+        "title": "No Risk",
+        "description": "We work purely performance-based. We only earn money when you earn money. Your growth is our only motivation."
+      }
+    ],
+    "cta": "Ready for the Top 0.1%?"
+  },
+  "modelsPage": {
+    "title": "Our Models",
+    "subtitle": "Exclusivity and Elegance. Discover the talents that trust Estelle.",
+    "backToHome": "Back to Home"
+  },
+  "services": {
+    "title": "Our Expertise",
+    "card1": {
+      "title": "Growth & Scaling",
+      "desc": "Data-driven strategies to sustainably increase your reach and revenue."
+    },
+    "card2": {
+      "title": "Protection & Privacy",
+      "desc": "We protect your content via DMCA takedowns and maintain your anonymity."
+    },
+    "card3": {
+      "title": "Brand Management",
+      "desc": "Building an exclusive personal brand that binds fans long-term."
+    }
+  },
+  "contact": {
+    "title": "Application",
+    "subtitle": "Ready for the next level? Fill out the form and we will get back to you soon.",
+    "name": "Name",
+    "email": "Email",
+    "instagram": "Instagram / Social Handle",
+    "age": "Age",
+    "status": "Current Status",
+    "selectStatus": "Please select...",
+    "statusOptions": {
+      "beginner": "Newcomer (No Account)",
+      "experienced": "Experienced ($1k - $10k/mo)",
+      "pro": "Top Creator ($10k+/mo)"
+    },
+    "photo": "Photos (Face & Body)",
+    "photoHelp": "Please 4 photos: Face (Front, Side, Angle) & Full Body. Max 25MB.",
+    "photoPlaceholder": "Select photos (Max 4)",
+    "message": "Message",
+    "messagePlaceholder": "Tell us briefly about yourself and your goals...",
+    "confirmAdult": "I confirm that I am at least 18 years old and agree to be contacted.",
+    "submit": "Submit Application",
+    "privacy": "By submitting, you agree that your data will be processed for contact purposes.",
+    "successTitle": "Application sent!",
+    "successText": "Thank you. We have received your application and will get back to you as soon as possible.",
+    "back": "Back to Form"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "slogan": "Redefining Management.",
+    "cols": {
+      "company": "Company",
+      "legal": "Legal",
+      "socials": "Connect"
+    },
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "whatWeDo": "What We Do",
+      "models": "Models",
+      "apply": "Apply",
+      "impressum": "Imprint",
+      "privacy": "Privacy"
+    }
+  },
+  "impressumPage": {
+    "title": "Imprint",
+    "subtitle": "Legal Information",
+    "sections": []
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "subtitle": "Information on data protection",
+    "updated": "Last updated: January 2026",
+    "intro": "The protection of your personal data is important to us.",
+    "sections": []
+  },
+  "notFound": {
+    "title": "Page not found"
+  }
+}

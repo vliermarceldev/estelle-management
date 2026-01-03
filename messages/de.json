@@ -1,0 +1,273 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "whatWeDo": "Leistungen",
+    "models": "Models",
+    "blog": "Academy",
+    "apply": "Bewerben",
+    "applyMobile": "Jetzt bewerben",
+    "selectLang": "Sprache wählen"
+  },
+  "blog": {
+    "title": "Academy",
+    "subtitle": "Strategien, Tipps & Insights für OnlyFans Creator.",
+    "readMore": "Artikel lesen",
+    "back": "Zurück zur Übersicht",
+    "published": "Veröffentlicht am"
+  },
+  "hero": {
+    "scroll": "Entdecken"
+  },
+  "home": {
+    "process": {
+      "title": "Der Weg zur Spitze",
+      "subtitle": "In drei Schritten zu deinem Imperium.",
+      "steps": [
+        {
+          "title": "Bewerbung & Audit",
+          "desc": "Wir analysieren dein Potenzial. Wenn du das 'gewisse Etwas' hast, entwickeln wir einen Schlachtplan."
+        },
+        {
+          "title": "Onboarding & Setup",
+          "desc": "Unser Team übernimmt. Technik, Accounts, Strategie. Du bekommst ein komplettes Management-Umfeld."
+        },
+        {
+          "title": "Skalierung",
+          "desc": "Wir drehen den Traffic auf. 24/7 Chatting, Marketing und Optimierung laufen auf Hochtouren."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "subtitle": "Alles, was du wissen musst.",
+      "items": [
+        {
+          "q": "Muss ich meinen Job kündigen?",
+          "a": "Nein. Unser Ziel ist es, dir Zeit zu schenken. Wir übernehmen die harte Arbeit, damit du beides vereinbaren kannst – bis OnlyFans dein Haupteinkommen wird."
+        },
+        {
+          "q": "Kostet das Startkapital?",
+          "a": "Nein. Wir arbeiten zu 100% erfolgsbasiert. Wir investieren unsere Zeit und Ressourcen in dich und verdienen nur, wenn du verdienst."
+        },
+        {
+          "q": "Bleibe ich anonym?",
+          "a": "Absolut. Wir nutzen Geoblocking (sperren dein Land/Stadt) und sorgen dafür, dass niemand aus deinem privaten Umfeld deinen Content sieht."
+        },
+        {
+          "q": "Wie schnell sehe ich Ergebnisse?",
+          "a": "Mit unserer Strategie sehen die meisten Models bereits im ersten Monat eine deutliche Umsatzsteigerung. Der volle Effekt tritt meist nach 3 Monaten ein."
+        },
+        {
+          "q": "Wie werden meine Einnahmen ausgezahlt?",
+          "a": "OnlyFans zahlt direkt auf dein Bankkonto aus. Wir stellen dir monatlich eine Rechnung über unseren Anteil. Du behältst immer die volle Kontrolle über deine Finanzen."
+        },
+        {
+          "q": "Brauche ich Vorerfahrung?",
+          "a": "Nein. Wir lieben es, neue Talente aufzubauen. Deine Persönlichkeit und Motivation sind wichtiger als ein perfektes Portfolio oder Erfahrung."
+        },
+        {
+          "q": "Gehören die Bilder weiterhin mir?",
+          "a": "Ja, zu 100%. Du behältst alle Rechte an deinem Content. Wir nutzen ihn nur zur Vermarktung während unserer Zusammenarbeit."
+        },
+        {
+          "q": "Was brauche ich zum Starten?",
+          "a": "Ein Smartphone mit guter Kamera, Internetzugang und einen gültigen Ausweis für die Verifizierung. Wir kümmern uns um Strategie und Technik."
+        },
+        {
+          "q": "Wie sieht es mit Steuern aus?",
+          "a": "Du bist selbstständig tätig. Wir empfehlen dir spezialisierte Steuerberater aus unserem Netzwerk, aber die Abführung liegt in deiner Verantwortung."
+        },
+        {
+          "q": "Kann ich jederzeit kündigen?",
+          "a": "Wir arbeiten mit fairen Verträgen. Eine Zusammenarbeit basiert auf Vertrauen. In der Regel haben wir kurze Kündigungsfristen, damit beide Seiten flexibel bleiben."
+        }
+      ]
+    }
+  },
+  "stats": {
+    "ranking": "Top 0.1% Strategien",
+    "support": "Persönlicher Support",
+    "discretion": "Absolute Diskretion"
+  },
+  "about": {
+    "title": "Über Estelle",
+    "headline": "Wir definieren Management neu.",
+    "text1": "Estelle wurde mit einer klaren Vision gegründet: Talenten eine Bühne zu bieten, die über reine Content-Erstellung hinausgeht. Wir verstehen Creator als Unternehmer.",
+    "text2": "Unser Team aus Experten in Marketing, Recht und Brand-Building arbeitet im Hintergrund, während du im Rampenlicht stehst. Deine Vision ist unser Auftrag.",
+    "signature": "Das Estelle Team",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "whatWeDoPage": {
+    "title": "Was wir tun",
+    "subtitle": "Wir verwandeln Talent in ein Imperium.",
+    "introHeadline": "Erfolg auf OnlyFans ist kein Zufall.",
+    "introText": "Es ist das Ergebnis aus Daten, Psychologie und harter Arbeit. Die meisten Agenturen posten nur Bilder. Wir bauen Unternehmen. Wir übernehmen den kompletten geschäftlichen Teil – von der Fan-Akquise bis zum Upselling – damit du dich voll auf deinen Content und dein Leben konzentrieren kannst.",
+    "services": [
+      {
+        "title": "24/7 High-Performance Chatting",
+        "description": "Unsere Chatter sind keine Assistenten, sie sind Verkaufsprofis. Wir antworten innerhalb von Sekunden, rund um die Uhr. Durch psychologisch optimierte Skripte bauen wir tiefe Bindungen zu deinen Fans auf und maximieren den Lifetime Value (LTV) jedes einzelnen Abonnenten."
+      },
+      {
+        "title": "Viral Traffic & Funnels",
+        "description": "Content ist King, aber Reichweite ist Queen. Wir managen deine Präsenz auf TikTok, Instagram und Dating-Apps mit aggressiven Strategien. Wir leiten gezielt 'High-Net-Worth' User (Fans mit hoher Kaufkraft) direkt in deinen Funnel."
+      },
+      {
+        "title": "Account Audit & Optimierung",
+        "description": "Wir analysieren deine bestehenden Zahlen gnadenlos. PPV-Preise, Welcome-Messages, Pinnwand-Struktur – wir finden die Umsatz-Lücken, die dich aktuell Tausende Euro kosten, und schließen sie sofort."
+      }
+    ],
+    "whyUsTitle": "Der Estelle Vorteil",
+    "whyUs": [
+      {
+        "title": "100% Freiheit",
+        "description": "Du erstellst den Content, wir machen den Rest. Kein Stress mit Nachrichten, kein Posting-Plan. Du genießt dein Leben."
+      },
+      {
+        "title": "Datengestütztes Wachstum",
+        "description": "Wir raten nicht. Wir analysieren Klickraten, Retention und Conversion-Rates täglich, um deine Einnahmen Woche für Woche zu steigern."
+      },
+      {
+        "title": "Recht & Schutz",
+        "description": "Wir scannen das Internet automatisiert nach Leaks. Unser Legal-Team sendet sofortige DMCA-Takedowns, um deinen Content und deine Marke zu schützen."
+      },
+      {
+        "title": "Kein Risiko",
+        "description": "Wir arbeiten rein erfolgsbasiert. Wir verdienen erst Geld, wenn du Geld verdienst. Dein Wachstum ist unsere einzige Motivation."
+      }
+    ],
+    "cta": "Bereit für die Top 0.1%?"
+  },
+  "modelsPage": {
+    "title": "Unsere Models",
+    "subtitle": "Exclusivität und Eleganz. Entdecke die Talente, die Estelle vertrauen.",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "services": {
+    "title": "Unsere Expertise",
+    "card1": {
+      "title": "Wachstum & Skalierung",
+      "desc": "Datengestützte Strategien, um deine Reichweite und Umsätze nachhaltig zu steigern."
+    },
+    "card2": {
+      "title": "Schutz & Privatsphäre",
+      "desc": "Wir schützen deine Inhalte durch DMCA-Takedowns und wahren deine Anonymität."
+    },
+    "card3": {
+      "title": "Brand Management",
+      "desc": "Aufbau einer exklusiven Personal Brand, die Fans langfristig bindet."
+    }
+  },
+  "contact": {
+    "title": "Bewerbung",
+    "subtitle": "Bereit für das nächste Level? Fülle das Formular aus und wir melden uns zeitnah.",
+    "name": "Name",
+    "email": "Email",
+    "instagram": "Instagram / Social Handle",
+    "age": "Alter",
+    "status": "Aktueller Status",
+    "selectStatus": "Bitte wählen...",
+    "statusOptions": {
+      "beginner": "Newcomer (Kein Account)",
+      "experienced": "Erfahren ($1k - $10k/Monat)",
+      "pro": "Top Creator ($10k+/Monat)"
+    },
+    "photo": "Fotos (Gesicht & Körper)",
+    "photoHelp": "Bitte 4 Bilder: Gesicht (Front, Seite, Winkel) & Ganzkörper. Max 25MB.",
+    "photoPlaceholder": "Bilder auswählen (Max 4)",
+    "message": "Nachricht",
+    "messagePlaceholder": "Erzähl uns kurz von dir und deinen Zielen...",
+    "confirmAdult": "Ich bestätige, dass ich mindestens 18 Jahre alt bin und stimme der Kontaktaufnahme zu.",
+    "submit": "Absenden",
+    "privacy": "Deine Daten werden vertraulich behandelt.",
+    "successTitle": "Bewerbung gesendet!",
+    "successText": "Vielen Dank. Wir haben deine Bewerbung erhalten und werden uns schnellstmöglich bei dir melden.",
+    "back": "Zurück zum Formular"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "slogan": "Redefining Management.",
+    "cols": {
+      "company": "Unternehmen",
+      "legal": "Rechtliches",
+      "socials": "Connect"
+    },
+    "links": {
+      "home": "Home",
+      "about": "Über Uns",
+      "whatWeDo": "Was wir tun",
+      "models": "Models",
+      "apply": "Bewerben",
+      "impressum": "Impressum",
+      "privacy": "Datenschutz"
+    }
+  },
+  "impressumPage": {
+    "title": "Impressum",
+    "subtitle": "Rechtliche Informationen",
+    "sections": [
+      {
+        "title": "Angaben gemäß § 5 TMG",
+        "content": "[FIRMENNAME]\n[STRAßE UND HAUSNUMMER]\n[PLZ] [STADT]\n[LAND]"
+      },
+      {
+        "title": "Vertreten durch",
+        "content": "[VORNAME NACHNAME DES GESCHÄFTSFÜHRERS]"
+      },
+      {
+        "title": "Kontakt",
+        "content": "Telefon: [TELEFONNUMMER]\nE-Mail: [EMAIL ADRESSE]"
+      },
+      {
+        "title": "Registereintrag",
+        "content": "Eintragung im Handelsregister.\nRegistergericht: [AMTSGERICHT]\nRegisternummer: [HRB NUMMER]"
+      },
+      {
+        "title": "Umsatzsteuer-ID",
+        "content": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:\n[UST-ID NR]"
+      },
+      {
+        "title": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+        "content": "[VORNAME NACHNAME]\n[STRAßE UND HAUSNUMMER]\n[PLZ] [STADT]"
+      },
+      {
+        "title": "EU-Streitschlichtung",
+        "content": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.\nUnsere E-Mail-Adresse finden Sie oben im Impressum."
+      },
+      {
+        "title": "Haftungsausschluss (Disclaimer)",
+        "content": "Inhalte: Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.\n\nLinks: Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen."
+      }
+    ]
+  },
+  "privacyPage": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Informationen zum Schutz Ihrer Daten",
+    "updated": "Stand: Januar 2026",
+    "intro": "Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG).",
+    "sections": [
+      {
+        "title": "1. Verantwortliche Stelle",
+        "content": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:\n\n[FIRMENNAME]\n[ADRESSE]\n[EMAIL]"
+      },
+      {
+        "title": "2. Datenerfassung auf unserer Website",
+        "content": "SSL- bzw. TLS-Verschlüsselung: Diese Seite nutzt aus Sicherheitsgründen eine SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von 'http://' auf 'https://' wechselt.\n\nServer-Log-Dateien: Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt (Browsertyp, Uhrzeit, IP-Adresse)."
+      },
+      {
+        "title": "3. Cookies",
+        "content": "Unsere Website verwendet teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Sie dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen."
+      },
+      {
+        "title": "4. Kontaktformular",
+        "content": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
+      },
+      {
+        "title": "5. Ihre Rechte",
+        "content": "Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden"
+  }
+}

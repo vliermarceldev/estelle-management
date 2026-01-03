@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-sans: var(--font-inter);
+}
+
+/* Dark Mode Konfiguration für Tailwind v4 via Klasse */
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #09090b; /* zinc-950 */
+}
+
+.dark {
+  --background: #09090b; /* zinc-950 */
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* FIX: Transition entfernt, um Flackern beim Laden zu verhindern */
+}
