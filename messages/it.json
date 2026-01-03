@@ -176,14 +176,56 @@
   "impressumPage": {
     "title": "Impressum",
     "subtitle": "Informazioni Legali",
-    "sections": []
+    "sections": [
+      {
+        "title": "Informazioni secondo § 5 TMG",
+        "content": "Estelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nGermania"
+      },
+      {
+        "title": "Contatto",
+        "content": "Telefono: +4917620013611\nEmail: contact@estelle-management.com"
+      },
+      {
+        "title": "Responsabile dei contenuti secondo § 55 Abs. 2 RStV",
+        "content": "Marcel van Lier\nVor dem Falltor 11\n46459 Rees\nGermania"
+      },
+      {
+        "title": "Risoluzione delle controversie dell'UE",
+        "content": "La Commissione europea fornisce una piattaforma per la risoluzione delle controversie online (ODR): https://ec.europa.eu/consumers/odr/.\nIl nostro indirizzo email si trova sopra nell'impressum."
+      },
+      {
+        "title": "Esclusione di responsabilità",
+        "content": "Contenuti: I contenuti delle nostre pagine sono stati creati con grande cura. Tuttavia, non possiamo assumerci alcuna responsabilità per la correttezza, completezza e attualità dei contenuti.\n\nLink: La nostra offerta contiene link a siti web esterni di terzi, sui cui contenuti non abbiamo alcuna influenza. Pertanto, non possiamo assumerci alcuna responsabilità per questi contenuti esterni."
+      }
+    ]
   },
   "privacyPage": {
     "title": "Informativa sulla Privacy",
     "subtitle": "Informazioni sulla protezione dei dati",
     "updated": "Ultimo aggiornamento: Gennaio 2026",
-    "intro": "La protezione dei tuoi dati personali è importante per noi.",
-    "sections": []
+    "intro": "La protezione dei tuoi dati personali è importante per noi. Elaboriamo i tuoi dati esclusivamente sulla base delle normative legali (GDPR, TKG).",
+    "sections": [
+      {
+        "title": "1. Ente Responsabile",
+        "content": "Il responsabile del trattamento dei dati su questo sito web è:\n\nEstelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nGermania\n\nEmail: contact@estelle-management.com"
+      },
+      {
+        "title": "2. Raccolta dati sul nostro sito web",
+        "content": "Crittografia SSL o TLS: Questo sito utilizza la crittografia SSL o TLS per motivi di sicurezza. Puoi riconoscere una connessione crittografata dal fatto che la riga dell'indirizzo del browser cambia da 'http://' a 'https://'.\n\nFile di log del server: Il provider delle pagine raccoglie e memorizza automaticamente informazioni nei cosiddetti file di log del server, che il tuo browser ci trasmette automaticamente (tipo di browser, ora, indirizzo IP)."
+      },
+      {
+        "title": "3. Cookie",
+        "content": "Il nostro sito web utilizza in parte i cosiddetti cookie. I cookie non causano danni al tuo computer e non contengono virus. Servono a rendere la nostra offerta più user-friendly, efficace e sicura."
+      },
+      {
+        "title": "4. Modulo di contatto",
+        "content": "Se ci invii richieste tramite il modulo di contatto, i tuoi dati dal modulo di richiesta, inclusi i dati di contatto che hai fornito lì, saranno memorizzati da noi allo scopo di elaborare la richiesta e in caso di domande di follow-up. Non trasmetteremo questi dati senza il tuo consenso."
+      },
+      {
+        "title": "5. I tuoi diritti",
+        "content": "Hai il diritto di ottenere informazioni gratuite sui tuoi dati personali memorizzati, la loro origine e destinatario e lo scopo del trattamento dei dati, nonché il diritto di correzione, blocco o cancellazione di questi dati in qualsiasi momento. A questo scopo, così come per ulteriori domande sul tema dei dati personali, puoi contattarci in qualsiasi momento all'indirizzo indicato nell'impressum."
+      }
+    ]
   },
   "notFound": {
     "title": "Pagina non trovata"

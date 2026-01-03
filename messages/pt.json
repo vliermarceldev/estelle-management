@@ -176,14 +176,56 @@
   "impressumPage": {
     "title": "Aviso Legal",
     "subtitle": "Informações Legais",
-    "sections": []
+    "sections": [
+      {
+        "title": "Informações segundo § 5 TMG",
+        "content": "Estelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nAlemanha"
+      },
+      {
+        "title": "Contato",
+        "content": "Telefone: +4917620013611\nE-mail: contact@estelle-management.com"
+      },
+      {
+        "title": "Responsável pelo conteúdo segundo § 55 Abs. 2 RStV",
+        "content": "Marcel van Lier\nVor dem Falltor 11\n46459 Rees\nAlemanha"
+      },
+      {
+        "title": "Resolução de disputas da UE",
+        "content": "A Comissão Europeia fornece uma plataforma para resolução de disputas online (ODR): https://ec.europa.eu/consumers/odr/.\nNosso endereço de e-mail pode ser encontrado acima no aviso legal."
+      },
+      {
+        "title": "Isenção de responsabilidade",
+        "content": "Conteúdo: O conteúdo das nossas páginas foi criado com muito cuidado. No entanto, não podemos assumir qualquer responsabilidade pela exatidão, integridade e atualidade do conteúdo.\n\nLinks: Nossa oferta contém links para sites externos de terceiros, sobre cujo conteúdo não temos influência. Portanto, não podemos assumir qualquer responsabilidade por esses conteúdos externos."
+      }
+    ]
   },
   "privacyPage": {
     "title": "Política de Privacidade",
     "subtitle": "Informações sobre proteção de dados",
     "updated": "Última atualização: Janeiro 2026",
-    "intro": "A proteção dos seus dados pessoais é importante para nós.",
-    "sections": []
+    "intro": "A proteção dos seus dados pessoais é importante para nós. Processamos seus dados exclusivamente com base nas regulamentações legais (GDPR, TKG).",
+    "sections": [
+      {
+        "title": "1. Órgão Responsável",
+        "content": "O responsável pelo processamento de dados neste site é:\n\nEstelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nAlemanha\n\nE-mail: contact@estelle-management.com"
+      },
+      {
+        "title": "2. Coleta de dados em nosso site",
+        "content": "Criptografia SSL ou TLS: Este site usa criptografia SSL ou TLS por motivos de segurança. Você pode reconhecer uma conexão criptografada pelo fato de que a linha de endereço do navegador muda de 'http://' para 'https://'.\n\nArquivos de log do servidor: O provedor das páginas coleta e armazena automaticamente informações nos chamados arquivos de log do servidor, que seu navegador nos transmite automaticamente (tipo de navegador, hora, endereço IP)."
+      },
+      {
+        "title": "3. Cookies",
+        "content": "Nosso site usa em parte os chamados cookies. Os cookies não causam danos ao seu computador e não contêm vírus. Eles servem para tornar nossa oferta mais amigável, eficaz e segura."
+      },
+      {
+        "title": "4. Formulário de contato",
+        "content": "Se você nos enviar consultas através do formulário de contato, seus dados do formulário de consulta, incluindo os detalhes de contato que você forneceu lá, serão armazenados por nós para fins de processamento da consulta e em caso de perguntas de acompanhamento. Não transmitiremos esses dados sem o seu consentimento."
+      },
+      {
+        "title": "5. Seus direitos",
+        "content": "Você tem o direito de obter informações gratuitas sobre seus dados pessoais armazenados, sua origem e destinatário e a finalidade do processamento de dados, bem como o direito de correção, bloqueio ou exclusão desses dados a qualquer momento. Para este fim, bem como para outras questões sobre o tema de dados pessoais, você pode nos contatar a qualquer momento no endereço indicado no aviso legal."
+      }
+    ]
   },
   "notFound": {
     "title": "Página não encontrada"

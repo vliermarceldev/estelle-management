@@ -204,14 +204,60 @@
   "impressumPage": {
     "title": "Imprint",
     "subtitle": "Legal Information",
-    "sections": []
+    "sections": [
+      {
+        "title": "Information according to § 5 TMG",
+        "content": "Estelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nGermany"
+      },
+      {
+        "title": "Contact",
+        "content": "Phone: +4917620013611\nEmail: contact@estelle-management.com"
+      },
+      {
+        "title": "Responsible for content according to § 55 Abs. 2 RStV",
+        "content": "Marcel van Lier\nVor dem Falltor 11\n46459 Rees\nGermany"
+      },
+      {
+        "title": "EU Dispute Resolution",
+        "content": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr/.\nOur email address can be found above in the imprint."
+      },
+      {
+        "title": "Dispute Resolution Proceedings",
+        "content": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+      },
+      {
+        "title": "Disclaimer",
+        "content": "Contents: The contents of our pages were created with great care. However, we cannot assume any liability for the correctness, completeness, and topicality of the contents.\n\nLinks: Our offer contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for these external contents."
+      }
+    ]
   },
   "privacyPage": {
     "title": "Privacy Policy",
     "subtitle": "Information on data protection",
     "updated": "Last updated: January 2026",
-    "intro": "The protection of your personal data is important to us.",
-    "sections": []
+    "intro": "The protection of your personal data is important to us. We process your data exclusively on the basis of the legal regulations (GDPR, TKG).",
+    "sections": [
+      {
+        "title": "1. Responsible Body",
+        "content": "Responsible for data processing on this website is:\n\nEstelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nGermany\n\nEmail: contact@estelle-management.com"
+      },
+      {
+        "title": "2. Data Collection on our Website",
+        "content": "SSL or TLS encryption: This site uses SSL or TLS encryption for security reasons. You can recognize an encrypted connection by the fact that the address line of the browser changes from 'http://' to 'https://'.\n\nServer Log Files: The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us (browser type, time, IP address)."
+      },
+      {
+        "title": "3. Cookies",
+        "content": "Our website partly uses so-called cookies. Cookies do not cause any damage to your computer and do not contain viruses. They serve to make our offer more user-friendly, effective, and secure."
+      },
+      {
+        "title": "4. Contact Form",
+        "content": "If you send us inquiries via the contact form, your details from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We will not pass on this data without your consent."
+      },
+      {
+        "title": "5. Your Rights",
+        "content": "You have the right to free information about your stored personal data, its origin and recipient and the purpose of the data processing as well as a right to correction, blocking or deletion of this data at any time. For this purpose, as well as for further questions on the subject of personal data, you can contact us at any time at the address given in the imprint."
+      }
+    ]
   },
   "notFound": {
     "title": "Page not found"

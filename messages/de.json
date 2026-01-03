@@ -207,31 +207,23 @@
     "sections": [
       {
         "title": "Angaben gemäß § 5 TMG",
-        "content": "[FIRMENNAME]\n[STRAßE UND HAUSNUMMER]\n[PLZ] [STADT]\n[LAND]"
-      },
-      {
-        "title": "Vertreten durch",
-        "content": "[VORNAME NACHNAME DES GESCHÄFTSFÜHRERS]"
+        "content": "Estelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nDeutschland"
       },
       {
         "title": "Kontakt",
-        "content": "Telefon: [TELEFONNUMMER]\nE-Mail: [EMAIL ADRESSE]"
-      },
-      {
-        "title": "Registereintrag",
-        "content": "Eintragung im Handelsregister.\nRegistergericht: [AMTSGERICHT]\nRegisternummer: [HRB NUMMER]"
-      },
-      {
-        "title": "Umsatzsteuer-ID",
-        "content": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:\n[UST-ID NR]"
+        "content": "Telefon: +4917620013611\nE-Mail: contact@estelle-management.com"
       },
       {
         "title": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
-        "content": "[VORNAME NACHNAME]\n[STRAßE UND HAUSNUMMER]\n[PLZ] [STADT]"
+        "content": "Marcel van Lier\nVor dem Falltor 11\n46459 Rees"
       },
       {
         "title": "EU-Streitschlichtung",
         "content": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.\nUnsere E-Mail-Adresse finden Sie oben im Impressum."
+      },
+      {
+        "title": "Verbraucherstreitbeilegung / Universalschlichtungsstelle",
+        "content": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
       },
       {
         "title": "Haftungsausschluss (Disclaimer)",
@@ -247,7 +239,7 @@
     "sections": [
       {
         "title": "1. Verantwortliche Stelle",
-        "content": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:\n\n[FIRMENNAME]\n[ADRESSE]\n[EMAIL]"
+        "content": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:\n\nEstelle Management\nMarcel van Lier\nVor dem Falltor 11\n46459 Rees\nDeutschland\n\nE-Mail: contact@estelle-management.com"
       },
       {
         "title": "2. Datenerfassung auf unserer Website",
@@ -263,7 +255,7 @@
       },
       {
         "title": "5. Ihre Rechte",
-        "content": "Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten."
+        "content": "Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden."
       }
     ]
   },
