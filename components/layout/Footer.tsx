@@ -142,7 +142,7 @@ export const Footer = ({ t, lang }: FooterProps) => {
           </p>
 
           <p className="text-zinc-300 dark:text-zinc-700 text-[10px] uppercase tracking-widest">
-            Zurich • Berlin • London
+            GERMANY
           </p>
         </div>
       </div>
