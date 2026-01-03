@@ -9,6 +9,7 @@ import { getDictionary } from "@/lib/dictionary";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -78,6 +79,7 @@ export default async function RootLayout({
               <CookieConsent />
             </SmoothScroll>
             <Analytics />
+            <SpeedInsights />
           </LanguageProvider>
         </ThemeProvider>
       </body>
