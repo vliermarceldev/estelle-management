@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { Instagram, Mail, ArrowUpRight } from "lucide-react";
-import type { Dictionary } from "@/lib/dictionary";
+// FIX: Importiere den Typ direkt aus der neuen Source of Truth
+import type { Dictionary } from "@/lib/types";
 
 interface FooterProps {
   t: Dictionary;

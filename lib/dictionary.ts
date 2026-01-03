@@ -1,6 +1,7 @@
 import "server-only";
-import { Dictionary } from "./types";
+import type { Dictionary } from "./types";
 
+// Die JSON-Dateien importieren und als 'Dictionary' typisieren
 const dictionaries = {
   de: () =>
     import("@/messages/de.json").then((module) => module.default as Dictionary),
@@ -21,3 +22,6 @@ export const getDictionary = async (locale: string): Promise<Dictionary> => {
     dictionaries[locale as keyof typeof dictionaries] || dictionaries.en;
   return loadDictionary();
 };
+
+// WICHTIG: Re-Export des Typs, damit alte Importe in anderen Dateien weiterhin funktionieren
+export type { Dictionary };

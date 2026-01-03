@@ -15,6 +15,16 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "next-themes";
 
+// Optional: Konstante für Sprachen, falls sie öfter gebraucht wird
+const LANGUAGES = [
+  { code: "DE", name: "Deutsch" },
+  { code: "EN", name: "English" },
+  { code: "ES", name: "Español" },
+  { code: "FR", name: "Français" },
+  { code: "IT", name: "Italiano" },
+  { code: "PT", name: "Português" },
+];
+
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -28,10 +38,12 @@ export const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
 
+  // Hydration Fix
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  // Close Lang Menu on Outside Click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -51,7 +63,7 @@ export const Navbar = () => {
     };
   }, [isLangMenuOpen]);
 
-  // Prevent scroll when mobile menu is open
+  // Lock Body Scroll when Mobile Menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -63,26 +75,22 @@ export const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  // Studio Route ignorieren (hat eigene Navbar)
   if (pathname?.startsWith("/studio")) {
     return null;
   }
-
-  const languages = [
-    { code: "DE", name: "Deutsch" },
-    { code: "EN", name: "English" },
-    { code: "ES", name: "Español" },
-    { code: "FR", name: "Français" },
-    { code: "IT", name: "Italiano" },
-    { code: "PT", name: "Português" },
-  ];
 
   const handleLangSelect = (code: string) => {
     const newLang = code.toLowerCase();
     if (!pathname) return;
 
+    // Pfad aufteilen und Sprache austauschen
     const segments = pathname.split("/");
-    // segments[0] ist leer string bei führendem Slash
+    // segments[0] ist leerer String bei führendem Slash
     if (segments.length > 1) {
+      // Wenn das zweite Segment (Index 1) eine bekannte Sprache ist, ersetzen wir es
+      // Ansonsten (z.B. Root "/"), fügen wir es ein.
+      // Da wir immer /[lang]/... nutzen, ist segments[1] fast immer die Sprache.
       segments[1] = newLang;
     } else {
       segments.splice(1, 0, newLang);
@@ -98,20 +106,19 @@ export const Navbar = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  // Helper für Active State (Exakter Match oder Sub-Route)
-  const isActive = (path: string) => {
-    const langPrefix = `/${currentLang?.toLowerCase() || "en"}`;
-    const fullPath = `${langPrefix}${path}`;
+  const langPrefix = `/${currentLang?.toLowerCase() || "en"}`;
 
-    // Home Page Check
+  // Helper für Active State
+  const isActive = (path: string) => {
+    const targetPath = path === "" ? langPrefix : `${langPrefix}${path}`;
+
+    // Exakter Match oder Sub-Route Match
     if (path === "") {
+      // Home ist speziell: nur exakt matchen oder mit Slash
       return pathname === langPrefix || pathname === `${langPrefix}/`;
     }
-
-    return pathname === fullPath || pathname?.startsWith(`${fullPath}/`);
+    return pathname === targetPath || pathname?.startsWith(`${targetPath}/`);
   };
-
-  const langPrefix = `/${currentLang?.toLowerCase() || "en"}`;
 
   return (
     <>
@@ -227,7 +234,7 @@ export const Navbar = () => {
                       className="absolute right-0 mt-4 w-40 bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xl py-2 animate-in fade-in slide-in-from-top-2 duration-200 rounded-none overflow-hidden"
                       role="menu"
                     >
-                      {languages.map((lang) => (
+                      {LANGUAGES.map((lang) => (
                         <button
                           key={lang.code}
                           onClick={() => handleLangSelect(lang.code)}
@@ -347,7 +354,7 @@ export const Navbar = () => {
               {t.nav.selectLang}
             </p>
             <div className="grid grid-cols-3 gap-3 max-w-xs mx-auto">
-              {languages.map((lang) => (
+              {LANGUAGES.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => handleLangSelect(lang.code)}
