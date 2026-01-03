@@ -5,7 +5,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import { CheckCircle, Loader2, UploadCloud, X, FileImage } from "lucide-react";
 import { submitContactForm, type ContactFormState } from "@/app/actions";
 
-// --- CSS Constants (DRY Pattern) ---
 const INPUT_STYLES =
   "w-full px-6 py-4 rounded-none transition-all outline-none bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:border-zinc-400 dark:focus:border-zinc-600 focus:bg-white dark:focus:bg-zinc-800/50 text-zinc-900 dark:text-zinc-100";
 
@@ -40,6 +39,7 @@ export const ContactForm = () => {
     const currentSize = files.reduce((acc, f) => acc + f.size, 0);
     const newSize = newFiles.reduce((acc, f) => acc + f.size, 0);
 
+    // 25MB Limit check
     if (currentSize + newSize > 25 * 1024 * 1024) {
       alert("Gesamtgröße überschreitet 25MB.");
       e.target.value = "";
@@ -74,7 +74,10 @@ export const ContactForm = () => {
 
   if (state.success) {
     return (
-      <div className="text-center py-12 animate-in fade-in duration-700">
+      <div
+        className="text-center py-12 animate-in fade-in duration-700"
+        role="alert"
+      >
         <div className="mx-auto w-16 h-16 bg-zinc-100 dark:bg-zinc-900 rounded-none flex items-center justify-center mb-6">
           <CheckCircle className="w-8 h-8 text-zinc-900 dark:text-zinc-100" />
         </div>
@@ -95,9 +98,16 @@ export const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6 relative z-10"
+      noValidate
+    >
       {state.message && !state.success && (
-        <div className="p-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-sm text-center border border-red-200 dark:border-red-800">
+        <div
+          className="p-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-sm text-center border border-red-200 dark:border-red-800"
+          role="alert"
+        >
           {state.message}
         </div>
       )}
@@ -113,11 +123,17 @@ export const ContactForm = () => {
             id="name"
             name="name"
             required
-            className={INPUT_STYLES}
+            aria-invalid={!!state.errors?.name}
+            aria-describedby={state.errors?.name ? "name-error" : undefined}
+            className={`${INPUT_STYLES} ${state.errors?.name ? "border-red-500 focus:border-red-500" : ""}`}
             placeholder={t.contact.name}
           />
           {state.errors?.name && (
-            <p className="text-red-500 text-xs pl-2 pt-1">
+            <p
+              id="name-error"
+              className="text-red-500 text-xs pl-2 pt-1"
+              role="alert"
+            >
               {state.errors.name[0]}
             </p>
           )}
@@ -131,11 +147,17 @@ export const ContactForm = () => {
             id="email"
             name="email"
             required
-            className={INPUT_STYLES}
+            aria-invalid={!!state.errors?.email}
+            aria-describedby={state.errors?.email ? "email-error" : undefined}
+            className={`${INPUT_STYLES} ${state.errors?.email ? "border-red-500 focus:border-red-500" : ""}`}
             placeholder="name@example.com"
           />
           {state.errors?.email && (
-            <p className="text-red-500 text-xs pl-2 pt-1">
+            <p
+              id="email-error"
+              className="text-red-500 text-xs pl-2 pt-1"
+              role="alert"
+            >
               {state.errors.email[0]}
             </p>
           )}
@@ -185,7 +207,6 @@ export const ContactForm = () => {
             required
             value={status}
             onChange={(e) => setStatus(e.target.value)}
-            // Hier überschreiben wir die Textfarbe konditional, nutzen aber INPUT_STYLES als Basis
             className={`${INPUT_STYLES.replace(
               "text-zinc-900 dark:text-zinc-100",
               ""
@@ -225,7 +246,7 @@ export const ContactForm = () => {
           </div>
         </div>
         {state.errors?.status && (
-          <p className="text-red-500 text-xs pl-2 pt-1">
+          <p className="text-red-500 text-xs pl-2 pt-1" role="alert">
             {state.errors.status[0]}
           </p>
         )}
@@ -239,7 +260,8 @@ export const ContactForm = () => {
             {files.length}/4
           </span>
         </label>
-        <div className="relative group">
+        {/* focus-within:ring sorgt für Tastatur-Fokus-Sichtbarkeit */}
+        <div className="relative group focus-within:ring-1 focus-within:ring-zinc-400 dark:focus-within:ring-zinc-600">
           <input
             type="file"
             id="photo-upload"
@@ -248,6 +270,7 @@ export const ContactForm = () => {
             onChange={handleFileChange}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
             disabled={files.length >= 4}
+            aria-label="Upload photos"
           />
 
           <div
@@ -256,6 +279,7 @@ export const ContactForm = () => {
                 ? "bg-zinc-100 dark:bg-zinc-800 border-zinc-200 cursor-not-allowed opacity-50"
                 : "border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 group-hover:border-zinc-400 dark:group-hover:border-zinc-500 cursor-pointer"
             }`}
+            aria-hidden="true"
           >
             <UploadCloud className="w-6 h-6 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors" />
 
@@ -295,6 +319,7 @@ export const ContactForm = () => {
                   type="button"
                   onClick={() => removeFile(index)}
                   className="p-2 hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-full transition-colors cursor-pointer"
+                  aria-label={`Remove file ${file.name}`}
                 >
                   <X className="w-4 h-4 text-zinc-500 hover:text-red-500" />
                 </button>
@@ -303,7 +328,7 @@ export const ContactForm = () => {
           </div>
         )}
         {state.errors?.photo && (
-          <p className="text-red-500 text-xs pl-2 pt-1">
+          <p className="text-red-500 text-xs pl-2 pt-1" role="alert">
             {state.errors.photo[0]}
           </p>
         )}
@@ -322,7 +347,7 @@ export const ContactForm = () => {
           placeholder={t.contact.messagePlaceholder}
         />
         {state.errors?.message && (
-          <p className="text-red-500 text-xs pl-2 pt-1">
+          <p className="text-red-500 text-xs pl-2 pt-1" role="alert">
             {state.errors.message[0]}
           </p>
         )}
@@ -348,18 +373,19 @@ export const ContactForm = () => {
         </label>
       </div>
       {state.errors?.isAdult && (
-        <p className="text-red-500 text-xs pl-2 pt-1">
+        <p className="text-red-500 text-xs pl-2 pt-1" role="alert">
           {state.errors.isAdult[0]}
         </p>
       )}
 
-      {/* HONEYPOT FIELD (Anti-Spam) - invisible to users */}
+      {/* HONEYPOT FIELD */}
       <input
         type="text"
         name="company_website"
         tabIndex={-1}
         autoComplete="off"
         className="opacity-0 absolute -z-10 w-0 h-0"
+        aria-hidden="true"
       />
 
       <button
