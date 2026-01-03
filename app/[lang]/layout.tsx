@@ -76,8 +76,8 @@ export default async function RootLayout({
               {/* Footer erhält nun Daten direkt vom Server -> bessere Performance */}
               <Footer t={dictionary} lang={lang} />
               <CookieConsent />
-              <Analytics />
             </SmoothScroll>
+            <Analytics />
           </LanguageProvider>
         </ThemeProvider>
       </body>
