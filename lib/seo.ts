@@ -1,24 +1,26 @@
 import { Metadata } from "next";
 
 export function getSeoMetadata(path: string, lang: string): Metadata {
-  // FIX: Nutzung von Environment Variable mit Fallback
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.estelle-management.com";
 
-  // Entferne führenden Slash, falls vorhanden, um doppelte Slashes zu vermeiden
-  const cleanPath = path.replace(/^\//, "");
+  // Sicherstellen, dass baseUrl keinen Slash am Ende hat
+  const cleanBaseUrl = baseUrl.replace(/\/$/, "");
+
+  // Sicherstellen, dass path keinen Slash am Anfang hat, aber existiert
+  const cleanPath = path ? path.replace(/^\//, "") : "";
 
   return {
-    metadataBase: new URL(baseUrl), // WICHTIG: metadataBase setzen, um Fehler bei relativen URLs zu vermeiden
+    metadataBase: new URL(cleanBaseUrl),
     alternates: {
-      canonical: `${baseUrl}/${lang}/${cleanPath}`,
+      canonical: `${cleanBaseUrl}/${lang}/${cleanPath}`,
       languages: {
-        en: `${baseUrl}/en/${cleanPath}`,
-        de: `${baseUrl}/de/${cleanPath}`,
-        es: `${baseUrl}/es/${cleanPath}`,
-        fr: `${baseUrl}/fr/${cleanPath}`,
-        it: `${baseUrl}/it/${cleanPath}`,
-        pt: `${baseUrl}/pt/${cleanPath}`,
+        en: `${cleanBaseUrl}/en/${cleanPath}`,
+        de: `${cleanBaseUrl}/de/${cleanPath}`,
+        es: `${cleanBaseUrl}/es/${cleanPath}`,
+        fr: `${cleanBaseUrl}/fr/${cleanPath}`,
+        it: `${cleanBaseUrl}/it/${cleanPath}`,
+        pt: `${cleanBaseUrl}/pt/${cleanPath}`,
       },
     },
   };

@@ -1,6 +1,5 @@
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
-// FIX: Typen direkt aus '@sanity/image-url' (nicht 'sanity' oder tiefe Pfade)
 import { type SanityImageSource } from "@sanity/image-url";
 import { type PortableTextBlock } from "sanity";
 
@@ -8,7 +7,11 @@ export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   apiVersion: "2024-01-01",
-  useCdn: false,
+  // WICHTIG: 'true' für Produktion. Das cached Inhalte im Edge-Network (schnell!).
+  // Nur 'false' während der lokalen Entwicklung für Live-Updates.
+  useCdn: process.env.NODE_ENV === "production",
+  // 'published' stellt sicher, dass wir keine Drafts leaken
+  perspective: "published",
 });
 
 const builder = imageUrlBuilder(client);
@@ -23,7 +26,6 @@ export interface SanityModel {
   name: string;
   slug: { current: string };
   instagram: string;
-  // FIX: 'any' -> 'SanityImageSource'
   mainImage: SanityImageSource;
   gallery: SanityImageSource[];
   stats: {
@@ -44,7 +46,6 @@ export interface SanityPost {
   publishedAt: string;
   mainImage: SanityImageSource;
   excerpt: string;
-  // FIX: 'any' -> 'PortableTextBlock[]'
   body: PortableTextBlock[];
   language: string;
 }
