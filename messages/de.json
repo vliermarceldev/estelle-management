@@ -13,7 +13,11 @@
     "subtitle": "Strategien, Tipps & Insights für OnlyFans Creator.",
     "readMore": "Artikel lesen",
     "back": "Zurück zur Übersicht",
-    "published": "Veröffentlicht am"
+    "published": "Veröffentlicht am",
+    "cta": {
+      "title": "Bereit für deinen eigenen Erfolg?",
+      "text": "Bewirb dich jetzt bei Estelle Management und starte deine Karriere."
+    }
   },
   "hero": {
     "scroll": "Entdecken"

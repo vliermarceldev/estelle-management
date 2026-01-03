@@ -112,7 +112,11 @@
     "subtitle": "Estratégias, dicas e insights para criadores do OnlyFans.",
     "readMore": "Ler artigo",
     "back": "Voltar à visão geral",
-    "published": "Publicado em"
+    "published": "Publicado em",
+    "cta": {
+      "title": "Pronta para o seu próprio sucesso?",
+      "text": "Inscreva-se agora na Estelle Management e inicie sua carreira."
+    }
   },
   "services": {
     "title": "Nossa Expertise",

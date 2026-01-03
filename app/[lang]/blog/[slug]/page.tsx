@@ -8,6 +8,9 @@ import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { Metadata } from "next";
 
+// Automatische Aktualisierung alle 60 Sekunden (ISR)
+export const revalidate = 60;
+
 async function getPost(slug: string, lang: string): Promise<SanityPost | null> {
   const query = `
     *[_type == "post" && slug.current == $slug][0] {
@@ -43,7 +46,7 @@ export async function generateMetadata({
   };
 }
 
-// FIX: 'any' entfernt. Typisierung für PortableText Komponenten
+// Typisierung für PortableText Komponenten
 const ptComponents: Partial<PortableTextReactComponents> = {
   block: {
     h1: ({ children }) => (
@@ -183,13 +186,13 @@ export default async function BlogPostPage({ params }: PageProps) {
           <PortableText value={post.body} components={ptComponents} />
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section - Jetzt mehrsprachig */}
         <div className="mt-20 p-8 md:p-12 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 text-center">
           <h3 className="text-2xl font-light text-zinc-900 dark:text-zinc-100 mb-4">
-            Bereit für deinen eigenen Erfolg?
+            {dict.blog.cta.title}
           </h3>
           <p className="text-zinc-500 dark:text-zinc-400 mb-8 font-light">
-            Bewirb dich jetzt bei Estelle Management und starte deine Karriere.
+            {dict.blog.cta.text}
           </p>
           <Link
             href={`/${lang}/#contact`}

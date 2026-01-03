@@ -112,7 +112,11 @@
     "subtitle": "Strategie, consigli e approfondimenti per i creatori di OnlyFans.",
     "readMore": "Leggi l'articolo",
     "back": "Torna alla panoramica",
-    "published": "Pubblicato il"
+    "published": "Pubblicato il",
+    "cta": {
+      "title": "Pronta per il tuo successo?",
+      "text": "Candidati ora su Estelle Management e avvia la tua carriera."
+    }
   },
   "services": {
     "title": "La Nostra Esperienza",
@@ -144,7 +148,7 @@
       "pro": "Top Creator ($10k+/mese)"
     },
     "photo": "Foto (Viso & Corpo)",
-    "photoHelp": "Per favore 4 foto: Viso (Fronte, Lato, Angolo) & Corpo Intero. Max 25MB.",
+    "photoHelp": "Per favore 4 fotos: Viso (Fronte, Lato, Angolo) & Corpo Intero. Max 25MB.",
     "photoPlaceholder": "Seleziona foto (Max 4)",
     "message": "Messaggio",
     "messagePlaceholder": "Parlaci brevemente di te e dei tuoi obiettivi...",
