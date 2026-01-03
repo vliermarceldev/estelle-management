@@ -8,7 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { getDictionary } from "@/lib/dictionary";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
