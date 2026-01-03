@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { getDictionary } from "@/lib/dictionary";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default async function RootLayout({
               {/* Footer erhält nun Daten direkt vom Server -> bessere Performance */}
               <Footer t={dictionary} lang={lang} />
               <CookieConsent />
+              <Analytics />
             </SmoothScroll>
           </LanguageProvider>
         </ThemeProvider>
