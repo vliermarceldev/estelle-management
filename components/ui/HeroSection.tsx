@@ -9,19 +9,15 @@ export const HeroSection = ({ t }: { t: Dictionary }) => {
       className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-300"
       aria-label="Hero Section"
     >
-      <div
-        className="absolute inset-0 z-0 w-full h-full"
-        aria-hidden="true" // Für Screenreader unsichtbar machen
-      >
+      <div className="absolute inset-0 z-0 w-full h-full" aria-hidden="true">
         <video
           autoPlay
           loop
           muted
           playsInline
-          poster="/heroposter.jpg" // Stelle sicher, dass dieses Bild existiert und klein ist (<100kb)
+          poster="/heroposter.jpg"
           className="w-full h-full object-cover"
         >
-          {/* Tipp: Nutze WebM für Chrome/Firefox falls verfügbar für kleinere Dateigröße */}
           <source src="/videos/hero2.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-white/10 dark:bg-black/40 transition-colors duration-300"></div>
@@ -61,13 +57,18 @@ export const HeroSection = ({ t }: { t: Dictionary }) => {
 
       <div className="absolute inset-0 z-30 flex flex-col items-center justify-center pointer-events-none">
         <div className="relative">
-          {/* OPTIMIERUNG: sr-only ist besser für SEO als opacity-0 */}
+          {/* 1. Echte H1 für SEO (unsichtbar für Layout, sichtbar für Bots) */}
           <h1 className="sr-only">ESTELLE Management</h1>
 
-          {/* Visueller "Platzhalter" damit das Layout stimmt, falls nötig, 
-              aber hier scheint das SVG den Text zu bilden. 
-              Wir lassen das SVG wirken und nutzen H1 nur für Bots. */}
+          {/* 2. Layout-Platzhalter (sorgt für die richtige Höhe & Positionierung) */}
+          <span
+            className="opacity-0 text-[23vw] md:text-[22vw] font-black tracking-tight leading-none select-none font-sans block"
+            aria-hidden="true"
+          >
+            ESTELLE
+          </span>
 
+          {/* Buttons positionieren sich relativ zum Platzhalter */}
           <div className="absolute top-[100%] left-0 w-full flex justify-center mt-6 md:mt-4 pointer-events-auto z-50">
             <div className="w-fit">
               <HeroButtons
