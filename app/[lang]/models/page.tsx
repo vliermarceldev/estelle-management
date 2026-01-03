@@ -5,6 +5,10 @@ import { ModelCard } from "@/components/ui/ModelCard";
 import { client, urlFor } from "@/sanity/client";
 import { getDictionary } from "@/lib/dictionary";
 
+// WICHTIG: Das sorgt dafür, dass Next.js die Seite alle 60 Sekunden aktualisiert.
+// Ohne das bleibt die Liste "eingefroren" (Caching).
+export const revalidate = 60;
+
 interface SanityModel {
   name: string;
   slug: { current: string };
