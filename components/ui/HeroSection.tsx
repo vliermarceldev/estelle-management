@@ -4,25 +4,33 @@ import { ScrollIndicator } from "@/components/ui/ScrollIndicator";
 import type { Dictionary } from "@/lib/dictionary";
 
 export const HeroSection = ({ t }: { t: Dictionary }) => {
-  // HINWEIS: Jetzt Server Component -> kein "use client"
-
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-300">
-      <div className="absolute inset-0 z-0 w-full h-full">
+    <section
+      className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-300"
+      aria-label="Hero Section"
+    >
+      <div
+        className="absolute inset-0 z-0 w-full h-full"
+        aria-hidden="true" // Für Screenreader unsichtbar machen
+      >
         <video
           autoPlay
           loop
           muted
           playsInline
-          poster="/heroposter.jpg"
+          poster="/heroposter.jpg" // Stelle sicher, dass dieses Bild existiert und klein ist (<100kb)
           className="w-full h-full object-cover"
         >
+          {/* Tipp: Nutze WebM für Chrome/Firefox falls verfügbar für kleinere Dateigröße */}
           <source src="/videos/hero2.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-white/10 dark:bg-black/40 transition-colors duration-300"></div>
       </div>
 
-      <div className="absolute inset-0 z-10 w-full h-full pointer-events-none select-none">
+      <div
+        className="absolute inset-0 z-10 w-full h-full pointer-events-none select-none"
+        aria-hidden="true"
+      >
         <svg
           className="w-full h-full block"
           preserveAspectRatio="xMidYMid slice"
@@ -53,12 +61,15 @@ export const HeroSection = ({ t }: { t: Dictionary }) => {
 
       <div className="absolute inset-0 z-30 flex flex-col items-center justify-center pointer-events-none">
         <div className="relative">
-          <h1 className="opacity-0 text-[23vw] md:text-[22vw] font-black tracking-tight leading-none select-none font-sans">
-            ESTELLE
-          </h1>
+          {/* OPTIMIERUNG: sr-only ist besser für SEO als opacity-0 */}
+          <h1 className="sr-only">ESTELLE Management</h1>
+
+          {/* Visueller "Platzhalter" damit das Layout stimmt, falls nötig, 
+              aber hier scheint das SVG den Text zu bilden. 
+              Wir lassen das SVG wirken und nutzen H1 nur für Bots. */}
+
           <div className="absolute top-[100%] left-0 w-full flex justify-center mt-6 md:mt-4 pointer-events-auto z-50">
             <div className="w-fit">
-              {/* Props statt Context Hook */}
               <HeroButtons
                 applyLabel={t.nav.apply}
                 modelsLabel={t.nav.models}
@@ -69,7 +80,6 @@ export const HeroSection = ({ t }: { t: Dictionary }) => {
       </div>
 
       <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center pointer-events-none">
-        {/* Neue interaktive Komponente */}
         <ScrollIndicator label={t.hero.scroll} />
       </div>
     </section>
