@@ -4,6 +4,7 @@ import React, { useState, useTransition } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { CheckCircle, Loader2, UploadCloud, X, FileImage } from "lucide-react";
 import { submitContactForm, type ContactFormState } from "@/app/actions";
+import { UPLOAD_CONFIG } from "@/lib/config";
 
 const INPUT_STYLES =
   "w-full px-6 py-4 rounded-none transition-all outline-none bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:border-zinc-400 dark:focus:border-zinc-600 focus:bg-white dark:focus:bg-zinc-800/50 text-zinc-900 dark:text-zinc-100";
@@ -30,8 +31,8 @@ export const ContactForm = () => {
     const newFiles = Array.from(e.target.files || []);
     if (newFiles.length === 0) return;
 
-    if (files.length + newFiles.length > 4) {
-      alert("Maximal 4 Bilder erlaubt.");
+    if (files.length + newFiles.length > UPLOAD_CONFIG.MAX_FILES) {
+      alert(`Maximal ${UPLOAD_CONFIG.MAX_FILES} Bilder erlaubt.`);
       e.target.value = "";
       return;
     }
@@ -39,8 +40,7 @@ export const ContactForm = () => {
     const currentSize = files.reduce((acc, f) => acc + f.size, 0);
     const newSize = newFiles.reduce((acc, f) => acc + f.size, 0);
 
-    // 25MB Limit check
-    if (currentSize + newSize > 25 * 1024 * 1024) {
+    if (currentSize + newSize > UPLOAD_CONFIG.MAX_TOTAL_SIZE) {
       alert("Gesamtgröße überschreitet 25MB.");
       e.target.value = "";
       return;
@@ -58,6 +58,7 @@ export const ContactForm = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
+    // Alte "photo" Einträge entfernen (falls leer) und unsere State-Files anhängen
     formData.delete("photo");
     files.forEach((file) => {
       formData.append("photo", file);
@@ -257,25 +258,24 @@ export const ContactForm = () => {
         <label className={`${LABEL_STYLES} flex justify-between`}>
           <span>{t.contact.photo || "Photos"}</span>
           <span className="text-[10px] text-zinc-400 normal-case tracking-normal">
-            {files.length}/4
+            {files.length}/{UPLOAD_CONFIG.MAX_FILES}
           </span>
         </label>
-        {/* focus-within:ring sorgt für Tastatur-Fokus-Sichtbarkeit */}
         <div className="relative group focus-within:ring-1 focus-within:ring-zinc-400 dark:focus-within:ring-zinc-600">
           <input
             type="file"
             id="photo-upload"
-            accept="image/png, image/jpeg, image/webp"
+            accept={UPLOAD_CONFIG.ACCEPTED_IMAGE_TYPES.join(", ")}
             multiple
             onChange={handleFileChange}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
-            disabled={files.length >= 4}
+            disabled={files.length >= UPLOAD_CONFIG.MAX_FILES}
             aria-label="Upload photos"
           />
 
           <div
             className={`w-full px-6 py-6 border border-dashed transition-all flex flex-col items-center justify-center gap-2 ${
-              files.length >= 4
+              files.length >= UPLOAD_CONFIG.MAX_FILES
                 ? "bg-zinc-100 dark:bg-zinc-800 border-zinc-200 cursor-not-allowed opacity-50"
                 : "border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 group-hover:border-zinc-400 dark:group-hover:border-zinc-500 cursor-pointer"
             }`}
@@ -284,13 +284,13 @@ export const ContactForm = () => {
             <UploadCloud className="w-6 h-6 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors" />
 
             <span className="text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-colors">
-              {files.length >= 4
+              {files.length >= UPLOAD_CONFIG.MAX_FILES
                 ? "Limit reached"
                 : t.contact.photoPlaceholder || "Click to add photos"}
             </span>
 
             <span className="text-[10px] text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
-              {t.contact.photoHelp || "Max 4 images"}
+              {t.contact.photoHelp || `Max ${UPLOAD_CONFIG.MAX_FILES} images`}
             </span>
           </div>
         </div>

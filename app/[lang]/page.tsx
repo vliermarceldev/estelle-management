@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/ui/ContactForm";
 import { ProcessSection } from "@/components/ui/ProcessSection";
 import { FAQ } from "@/components/ui/FAQ";
 import { HeroSection } from "@/components/ui/HeroSection";
+import { FAQItem } from "@/lib/types";
 
 interface PageProps {
   params: Promise<{ lang: string }>;
@@ -30,10 +31,12 @@ export default async function Home({ params }: PageProps) {
   const t = await getDictionary(lang);
 
   const faqList = t.home?.faq?.items || [];
+
+  // TYP-OPTIMIERUNG: Explizites Interface statt 'any'
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqList.map((item: any) => ({
+    mainEntity: faqList.map((item: FAQItem) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: {
@@ -50,14 +53,12 @@ export default async function Home({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* HeroSection ist nun Server Component und erhält t */}
       <HeroSection t={t} />
 
       <div id="process">
         <ProcessSection t={t} />
       </div>
 
-      {/* FAQ erhält die Daten vom Server */}
       <FAQ
         title={t.home.faq.title}
         subtitle={t.home.faq.subtitle}

@@ -1,17 +1,20 @@
-// v1/lib/dictionary.ts
 import "server-only";
+import { Dictionary } from "./types";
 
 const dictionaries = {
-  de: () => import("@/messages/de.json").then((module) => module.default),
-  en: () => import("@/messages/en.json").then((module) => module.default),
-  es: () => import("@/messages/es.json").then((module) => module.default),
-  fr: () => import("@/messages/fr.json").then((module) => module.default),
-  it: () => import("@/messages/it.json").then((module) => module.default),
-  pt: () => import("@/messages/pt.json").then((module) => module.default),
+  de: () =>
+    import("@/messages/de.json").then((module) => module.default as Dictionary),
+  en: () =>
+    import("@/messages/en.json").then((module) => module.default as Dictionary),
+  es: () =>
+    import("@/messages/es.json").then((module) => module.default as Dictionary),
+  fr: () =>
+    import("@/messages/fr.json").then((module) => module.default as Dictionary),
+  it: () =>
+    import("@/messages/it.json").then((module) => module.default as Dictionary),
+  pt: () =>
+    import("@/messages/pt.json").then((module) => module.default as Dictionary),
 };
-
-// Wir nutzen 'de' als Referenz für die Typsicherheit im gesamten Projekt
-export type Dictionary = Awaited<ReturnType<typeof dictionaries.de>>;
 
 export const getDictionary = async (locale: string): Promise<Dictionary> => {
   const loadDictionary =

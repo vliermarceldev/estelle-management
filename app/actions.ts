@@ -2,18 +2,20 @@
 
 import { z } from "zod";
 import { Resend } from "resend";
+import { createClient } from "next-sanity";
+import { UPLOAD_CONFIG } from "@/lib/config";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "onboarding@resend.dev";
 
-const MAX_TOTAL_SIZE = 25 * 1024 * 1024;
-const MAX_FILES = 4;
-const ACCEPTED_IMAGE_TYPES = [
-  "image/jpeg",
-  "image/jpg",
-  "image/png",
-  "image/webp",
-];
+// WRITE Client für Sanity (benötigt Token in .env)
+const sanityWriteClient = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+  apiVersion: "2024-01-01",
+  token: process.env.SANITY_API_TOKEN,
+  useCdn: false, // Keine CDN für Writes
+});
 
 export type ContactFormState = {
   success: boolean;
@@ -33,7 +35,6 @@ const ContactSchema = z.object({
   isAdult: z.literal(true, {
     message: "Bestätigung erforderlich (18+).",
   }),
-  // Honeypot Feld (muss leer sein)
   company_website: z.string().optional(),
 });
 
@@ -41,6 +42,7 @@ export async function submitContactForm(
   prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
+  // Raw Data holen für erste Checks (Honeypot)
   const rawData = {
     name: formData.get("name"),
     email: formData.get("email"),
@@ -49,22 +51,17 @@ export async function submitContactForm(
     status: formData.get("status"),
     message: formData.get("message"),
     isAdult: formData.get("isAdult") === "on" ? true : false,
-    // Honeypot field
     company_website: formData.get("company_website"),
   };
 
-  // SPAM SCHUTZ: Wenn das unsichtbare Feld ausgefüllt ist -> Abbruch (aber Success faken)
+  // 1. Honeypot Check (Spam-Schutz)
   if (rawData.company_website) {
-    console.warn("Honeypot triggered by bot.");
-    // Wir geben "Erfolg" zurück, damit der Bot denkt, er war erfolgreich und nicht weiter probiert
+    console.warn("Honeypot triggered.");
     return { success: true, message: "Bewerbung erfolgreich gesendet!" };
   }
 
-  const photoFiles = formData.getAll("photo") as File[];
-  const validFiles = photoFiles.filter((f) => f.size > 0);
-
+  // 2. Validation mit Zod
   const validation = ContactSchema.safeParse(rawData);
-
   if (!validation.success) {
     return {
       success: false,
@@ -73,21 +70,28 @@ export async function submitContactForm(
     };
   }
 
-  // ... (Restlicher Code für Bilder & Upload bleibt identisch wie vorher) ...
-  let attachments = [];
-  let totalSize = 0;
+  // WICHTIG: Ab hier nutzen wir die validierten Daten!
+  // TypeScript weiß jetzt, dass diese Felder Strings sind.
+  const validData = validation.data;
+
+  // 3. File Validation & Upload Logic
+  const photoFiles = formData.getAll("photo") as File[];
+  const validFiles = photoFiles.filter((f) => f.size > 0);
+  const uploadedImageUrls: string[] = [];
 
   if (validFiles.length > 0) {
-    if (validFiles.length > MAX_FILES) {
+    // Check Limits
+    if (validFiles.length > UPLOAD_CONFIG.MAX_FILES) {
       return {
         success: false,
-        message: `Zu viele Dateien (Max. ${MAX_FILES}).`,
-        errors: { photo: [`Max. ${MAX_FILES} Bilder.`] },
+        message: `Zu viele Dateien (Max. ${UPLOAD_CONFIG.MAX_FILES}).`,
+        errors: { photo: [`Max. ${UPLOAD_CONFIG.MAX_FILES} Bilder.`] },
       };
     }
 
+    let totalSize = 0;
     for (const file of validFiles) {
-      if (!ACCEPTED_IMAGE_TYPES.includes(file.type)) {
+      if (!UPLOAD_CONFIG.ACCEPTED_IMAGE_TYPES.includes(file.type)) {
         return {
           success: false,
           message: `Typ nicht unterstützt: ${file.name}`,
@@ -97,7 +101,7 @@ export async function submitContactForm(
       totalSize += file.size;
     }
 
-    if (totalSize > MAX_TOTAL_SIZE) {
+    if (totalSize > UPLOAD_CONFIG.MAX_TOTAL_SIZE) {
       return {
         success: false,
         message: "Gesamtgröße zu hoch (Max. 25MB).",
@@ -105,40 +109,64 @@ export async function submitContactForm(
       };
     }
 
+    // UPLOAD TO SANITY
     try {
+      if (!process.env.SANITY_API_TOKEN) {
+        console.error("SANITY_API_TOKEN fehlt!");
+        throw new Error("Internal Configuration Error");
+      }
+
       for (const file of validFiles) {
         const arrayBuffer = await file.arrayBuffer();
-        attachments.push({
+        const buffer = Buffer.from(arrayBuffer);
+
+        // Upload als Asset
+        const asset = await sanityWriteClient.assets.upload("image", buffer, {
           filename: file.name,
-          content: Buffer.from(arrayBuffer),
+          contentType: file.type,
         });
+
+        uploadedImageUrls.push(asset.url);
       }
     } catch (error) {
-      console.error(error);
+      console.error("Sanity Upload Error:", error);
       return { success: false, message: "Fehler beim Bild-Upload." };
     }
   }
 
+  // 4. Send Email (mit validData statt rawData)
   try {
     const { error } = await resend.emails.send({
       from: "Estelle Management <onboarding@resend.dev>",
       to: [ADMIN_EMAIL],
-      replyTo: rawData.email as string,
-      subject: `Bewerbung: ${rawData.name} (18+ confirmed)`,
+      replyTo: validData.email, // Hier sicher ein String
+      subject: `Bewerbung: ${validData.name} (18+ confirmed)`,
       html: `
         <h2>Neue Bewerbung</h2>
         <p>✅ <strong>Alter bestätigt (18+)</strong></p>
         <hr/>
-        <p><strong>Name:</strong> ${rawData.name}</p>
-        <p><strong>Email:</strong> ${rawData.email}</p>
-        <p><strong>Instagram:</strong> ${rawData.instagram}</p>
-        <p><strong>Status:</strong> ${rawData.status}</p>
-        <p><strong>Alter:</strong> ${rawData.age}</p>
+        <p><strong>Name:</strong> ${validData.name}</p>
+        <p><strong>Email:</strong> ${validData.email}</p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/${validData.instagram.replace("@", "")}" target="_blank">${validData.instagram}</a></p>
+        <p><strong>Status:</strong> ${validData.status}</p>
+        <p><strong>Alter:</strong> ${validData.age}</p>
         <br/>
         <h3>Nachricht:</h3>
-        <p>${rawData.message}</p>
+        <p>${validData.message}</p>
+        <hr/>
+        <h3>Fotos (${uploadedImageUrls.length}):</h3>
+        ${
+          uploadedImageUrls.length > 0
+            ? `<ul>${uploadedImageUrls
+                .map(
+                  (url) =>
+                    `<li><a href="${url}" target="_blank">Bild ansehen</a></li>`
+                )
+                .join("")}</ul>
+               <p style="font-size: 12px; color: #666;">Bilder werden sicher bei Sanity gehostet.</p>`
+            : "<p>Keine Fotos hochgeladen.</p>"
+        }
       `,
-      attachments: attachments,
     });
 
     if (error) {
