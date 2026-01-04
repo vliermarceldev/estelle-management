@@ -1,14 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Aktiviert React Compiler (neu in Next 15/16, experimentell aber oft schneller)
+  // Aktiviert React Compiler
+  // WICHTIG: Das Limit hier muss hoch genug sein, sonst wirft Next.js Fehler 413,
+  // bevor die Action erreicht wird.
   experimental: {
     serverActions: {
       bodySizeLimit: "30mb",
     },
   },
   images: {
-    // WICHTIG: AVIF zuerst, da es effizienter ist. Browser nimmt das erste unterstützte Format.
+    // WICHTIG: AVIF zuerst, da es effizienter ist.
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
@@ -42,12 +44,12 @@ const nextConfig: NextConfig = {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
           },
-          // NEU: HSTS für Sicherheit (erzwingt HTTPS für 2 Jahre)
+          // HSTS für Sicherheit
           {
             key: "Strict-Transport-Security",
             value: "max-age=63072000; includeSubDomains; preload",
           },
-          // NEU: Permissions Policy (verbietet unnötige Browser-APIs -> besserer Score)
+          // Permissions Policy
           {
             key: "Permissions-Policy",
             value:

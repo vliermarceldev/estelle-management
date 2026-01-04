@@ -65,11 +65,23 @@ export const ContactForm = () => {
     });
 
     startTransition(async () => {
-      const result = await submitContactForm(
-        { success: false, message: "" },
-        formData
-      );
-      setState(result);
+      try {
+        // WICHTIG: Der Aufruf ist jetzt in einem try-catch Block.
+        // Wenn die Dateien zu groß sind (Server Error 413), wirft Next.js hier einen Fehler.
+        const result = await submitContactForm(
+          { success: false, message: "" },
+          formData
+        );
+        setState(result);
+      } catch (error) {
+        console.error("Submission Error:", error);
+        // Fehler abfangen und dem User anzeigen, statt die Fehlerseite zu laden
+        setState({
+          success: false,
+          message:
+            "Ein Fehler ist aufgetreten. Möglicherweise sind die Dateien zu groß oder die Verbindung wurde unterbrochen.",
+        });
+      }
     });
   };
 
