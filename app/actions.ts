@@ -5,17 +5,7 @@ import { Resend } from "resend";
 import { createClient } from "next-sanity";
 import { UPLOAD_CONFIG } from "@/lib/config";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "onboarding@resend.dev";
-
-// WRITE Client für Sanity (benötigt Token in .env)
-const sanityWriteClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  apiVersion: "2024-01-01",
-  token: process.env.SANITY_API_TOKEN,
-  useCdn: false, // Keine CDN für Writes
-});
+// Wir initialisieren die Clients erst IN der Funktion, um Crashes beim Start zu verhindern.
 
 export type ContactFormState = {
   success: boolean;
@@ -42,7 +32,39 @@ export async function submitContactForm(
   prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
-  // Raw Data holen für erste Checks (Honeypot)
+  // 0. SICHERHEITS-CHECK: Sind die Env-Vars da?
+  if (!process.env.RESEND_API_KEY) {
+    console.error("CRITICAL: RESEND_API_KEY fehlt in .env.local");
+    return {
+      success: false,
+      message: "Interner Fehler: E-Mail Konfiguration fehlt.",
+    };
+  }
+  if (
+    !process.env.SANITY_API_TOKEN ||
+    !process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+  ) {
+    console.error(
+      "CRITICAL: SANITY_API_TOKEN oder Project ID fehlt in .env.local"
+    );
+    return {
+      success: false,
+      message: "Interner Fehler: Datenbank Konfiguration fehlt.",
+    };
+  }
+
+  // Clients initialisieren (jetzt sicher)
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const sanityWriteClient = createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+    apiVersion: "2024-01-01",
+    token: process.env.SANITY_API_TOKEN,
+    useCdn: false,
+  });
+  const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "onboarding@resend.dev";
+
+  // Raw Data
   const rawData = {
     name: formData.get("name"),
     email: formData.get("email"),
@@ -54,13 +76,13 @@ export async function submitContactForm(
     company_website: formData.get("company_website"),
   };
 
-  // 1. Honeypot Check (Spam-Schutz)
+  // 1. Honeypot Check
   if (rawData.company_website) {
     console.warn("Honeypot triggered.");
     return { success: true, message: "Bewerbung erfolgreich gesendet!" };
   }
 
-  // 2. Validation mit Zod
+  // 2. Validation
   const validation = ContactSchema.safeParse(rawData);
   if (!validation.success) {
     return {
@@ -70,8 +92,6 @@ export async function submitContactForm(
     };
   }
 
-  // WICHTIG: Ab hier nutzen wir die validierten Daten!
-  // TypeScript weiß jetzt, dass diese Felder Strings sind.
   const validData = validation.data;
 
   // 3. File Validation & Upload Logic
@@ -80,7 +100,6 @@ export async function submitContactForm(
   const uploadedImageUrls: string[] = [];
 
   if (validFiles.length > 0) {
-    // Check Limits
     if (validFiles.length > UPLOAD_CONFIG.MAX_FILES) {
       return {
         success: false,
@@ -111,16 +130,10 @@ export async function submitContactForm(
 
     // UPLOAD TO SANITY
     try {
-      if (!process.env.SANITY_API_TOKEN) {
-        console.error("SANITY_API_TOKEN fehlt!");
-        throw new Error("Internal Configuration Error");
-      }
-
       for (const file of validFiles) {
         const arrayBuffer = await file.arrayBuffer();
         const buffer = Buffer.from(arrayBuffer);
 
-        // Upload als Asset
         const asset = await sanityWriteClient.assets.upload("image", buffer, {
           filename: file.name,
           contentType: file.type,
@@ -130,16 +143,20 @@ export async function submitContactForm(
       }
     } catch (error) {
       console.error("Sanity Upload Error:", error);
-      return { success: false, message: "Fehler beim Bild-Upload." };
+      // Detailliertere Fehlermeldung für dich im Server-Log
+      return {
+        success: false,
+        message: "Fehler beim Bild-Upload. Siehe Server-Logs.",
+      };
     }
   }
 
-  // 4. Send Email (mit validData statt rawData)
+  // 4. Send Email
   try {
     const { error } = await resend.emails.send({
       from: "Estelle Management <onboarding@resend.dev>",
       to: [ADMIN_EMAIL],
-      replyTo: validData.email, // Hier sicher ein String
+      replyTo: validData.email,
       subject: `Bewerbung: ${validData.name} (18+ confirmed)`,
       html: `
         <h2>Neue Bewerbung</h2>
@@ -170,13 +187,13 @@ export async function submitContactForm(
     });
 
     if (error) {
-      console.error(error);
+      console.error("Resend Error:", error);
       return { success: false, message: "Fehler beim Senden der E-Mail." };
     }
 
     return { success: true, message: "Bewerbung erfolgreich gesendet!" };
   } catch (err) {
-    console.error(err);
-    return { success: false, message: "Server Fehler." };
+    console.error("Server Action Error:", err);
+    return { success: false, message: "Server Fehler beim E-Mail Versand." };
   }
 }
