@@ -66,4 +66,33 @@ export const postType = defineType({
       of: [{ type: "block" }, { type: "image" }],
     }),
   ],
+  // NEU: Optimierte Vorschau für die Liste
+  preview: {
+    select: {
+      title: "title",
+      media: "mainImage",
+      lang: "language",
+    },
+    prepare(selection) {
+      const { title, media, lang } = selection;
+
+      // Map für Flaggen-Emojis
+      const emojis: Record<string, string> = {
+        de: "🇩🇪",
+        en: "🇺🇸",
+        es: "🇪🇸",
+        fr: "🇫🇷",
+        it: "🇮🇹",
+        pt: "🇵🇹",
+      };
+
+      const emoji = emojis[lang as string] || "🏳️";
+
+      return {
+        title: `${emoji} ${title}`,
+        subtitle: `Sprache: ${lang ? lang.toUpperCase() : "Unbekannt"}`,
+        media: media,
+      };
+    },
+  },
 });
