@@ -36,7 +36,7 @@
       "items": [
         {
           "q": "Dois-je quitter mon emploi ?",
-          "a": "Non. Notre but est de vous donner du temps. Nous faisons le travail difficile pour que vous puissiez gérer les deux."
+          "a": "Non. Notre but est de vous donner du temps. Nous faisons le travail difficile pour que vous puissiez gérer les deux – jusqu'à ce qu'OnlyFans devienne votre revenu principal."
         },
         {
           "q": "Y a-t-il des frais initiaux ?",
@@ -45,6 +45,34 @@
         {
           "q": "Je reste anonyme ?",
           "a": "Absolument. Nous utilisons le géoblocage pour que personne de votre entourage privé ne voie votre contenu."
+        },
+        {
+          "q": "À quelle vitesse verrai-je des résultats ?",
+          "a": "Avec notre stratégie, la plupart des modèles constatent une augmentation significative de leurs revenus dès le premier mois. Le plein effet se fait généralement sentir après 3 mois."
+        },
+        {
+          "q": "Comment les gains sont-ils versés ?",
+          "a": "OnlyFans paie directement sur votre compte bancaire. Nous vous facturons notre part mensuellement. Vous gardez toujours le contrôle total de vos finances."
+        },
+        {
+          "q": "Ai-je besoin d'expérience ?",
+          "a": "Non. Nous aimons développer de nouveaux talents. Votre personnalité et votre motivation sont plus importantes qu'un portfolio parfait ou de l'expérience."
+        },
+        {
+          "q": "Les photos m'appartiennent-elles toujours ?",
+          "a": "Oui, à 100%. Vous conservez tous les droits sur votre contenu. Nous ne l'utilisons que pour le marketing pendant notre collaboration."
+        },
+        {
+          "q": "De quoi ai-je besoin pour commencer ?",
+          "a": "Un smartphone avec un bon appareil photo, une connexion Internet et une pièce d'identité valide pour la vérification. Nous nous occupons de la stratégie et de la technique."
+        },
+        {
+          "q": "Qu'en est-il des impôts ?",
+          "a": "Vous êtes travailleur indépendant. Nous recommandons des conseillers fiscaux spécialisés de notre réseau, mais la déclaration relève de votre responsabilité."
+        },
+        {
+          "q": "Puis-je résilier à tout moment ?",
+          "a": "Nous travaillons avec des contrats équitables. La collaboration est basée sur la confiance. En général, nous avons des préavis courts pour que les deux parties restent flexibles."
         }
       ]
     }
