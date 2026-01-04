@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { client, urlFor, SanityPost } from "@/sanity/client";
@@ -37,6 +36,8 @@ export async function generateMetadata({
   const { lang, slug } = await params;
   const post = await getPost(slug, lang);
   if (!post) return {};
+
+  // WICHTIG: Hier behalten wir das Bild für Social Media Vorschauen (WhatsApp, LinkedIn etc.)
   return {
     title: `${post.title} | Estelle Management`,
     description: post.excerpt,
@@ -161,18 +162,9 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Main Image */}
-      {post.mainImage && (
-        <div className="w-full h-[40vh] md:h-[60vh] relative mb-16 bg-zinc-100 dark:bg-zinc-900">
-          <Image
-            src={urlFor(post.mainImage).width(1920).height(1080).url()}
-            alt={post.title}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      )}
+      {/* BILD WURDE HIER ENTFERNT 
+         Es erscheint jetzt nur noch in der Übersicht (Listing).
+      */}
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-4">
@@ -186,7 +178,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <PortableText value={post.body} components={ptComponents} />
         </div>
 
-        {/* CTA Section - Jetzt mehrsprachig */}
+        {/* CTA Section */}
         <div className="mt-20 p-8 md:p-12 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 text-center">
           <h3 className="text-2xl font-light text-zinc-900 dark:text-zinc-100 mb-4">
             {dict.blog.cta.title}

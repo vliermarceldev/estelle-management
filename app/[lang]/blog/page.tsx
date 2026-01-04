@@ -12,6 +12,7 @@ interface PageProps {
 }
 
 async function getPosts(lang: string): Promise<SanityPost[]> {
+  // Wir fragen hier explizit das 'mainImage' mit ab
   const query = `
     *[_type == "post" && language == $lang] | order(publishedAt desc) {
       _id,
@@ -29,7 +30,6 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { lang } = await params;
-  // FIX: 'as any' entfernt -> ist jetzt typsicher
   const dict = await getDictionary(lang);
 
   return {
@@ -40,7 +40,6 @@ export async function generateMetadata({
 
 export default async function BlogPage({ params }: PageProps) {
   const { lang } = await params;
-  // FIX: 'as any' entfernt
   const dict = await getDictionary(lang);
   const posts = await getPosts(lang);
 
@@ -67,6 +66,7 @@ export default async function BlogPage({ params }: PageProps) {
                 className="group block bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-300 animate-in fade-in slide-in-from-bottom-8"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
+                {/* --- HIER IST DAS BILD FÜR DIE ÜBERSICHT --- */}
                 <div className="aspect-[16/9] relative overflow-hidden bg-zinc-100 dark:bg-zinc-900">
                   {post.mainImage && (
                     <Image
@@ -74,7 +74,7 @@ export default async function BlogPage({ params }: PageProps) {
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      // Optional: Größen optimieren für Grid
+                      // Sizes für Performance optimiert
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   )}
