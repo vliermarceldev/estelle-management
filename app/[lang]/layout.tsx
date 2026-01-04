@@ -46,6 +46,18 @@ export async function generateMetadata({
     },
     description: "Exclusive OnlyFans Management & Marketing.",
     metadataBase: new URL(baseUrl),
+    // SEO Optimierung: Sprach-Alternativen angeben
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        en: "/en",
+        de: "/de",
+        es: "/es",
+        fr: "/fr",
+        it: "/it",
+        pt: "/pt",
+      },
+    },
     openGraph: {
       title: "Estelle Management",
       description: "Redefining Management.",
@@ -54,7 +66,6 @@ export async function generateMetadata({
       locale: lang,
       type: "website",
     },
-    // Robots Anweisung explizit setzen
     robots: {
       index: true,
       follow: true,
@@ -72,18 +83,17 @@ export default async function RootLayout({
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
-  // JSON-LD für Schema.org (Wichtig für Google!)
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.estelle-management.com";
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "EmploymentAgency",
     name: "Estelle Management",
-    url: "https://www.estelle-management.com",
-    logo: "https://www.estelle-management.com/icon.png", // Pfad ggf. anpassen
+    url: baseUrl,
+    logo: `${baseUrl}/icon.png`,
     description: "Exclusive OnlyFans Management & Marketing Agency.",
-    sameAs: [
-      "https://www.instagram.com/estellemanagement",
-      // Weitere Social Links hier hinzufügen
-    ],
+    sameAs: ["https://www.instagram.com/estellemanagement"],
   };
 
   return (
@@ -91,7 +101,6 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} font-sans min-h-screen bg-background text-foreground selection:bg-zinc-200 dark:selection:bg-zinc-700 selection:text-black dark:selection:text-white antialiased`}
       >
-        {/* Structured Data script injection */}
         <Script
           id="json-ld-agency"
           type="application/ld+json"

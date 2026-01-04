@@ -1,4 +1,3 @@
-// middleware.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { match } from "@formatjs/intl-localematcher";
@@ -8,7 +7,6 @@ const locales = ["en", "de", "es", "fr", "it", "pt"];
 const defaultLocale = "en";
 
 function getLocale(request: NextRequest): string {
-  // Fallback, falls Header fehlen
   const headers = {
     "accept-language":
       request.headers.get("accept-language") || "en-US,en;q=0.5",
@@ -20,14 +18,17 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1. Check: Dateien, API, Next.js Internals UND Studio ignorieren
+  // 1. Check: System-Pfade und statische Assets ignorieren
+  // Regex verfeinert für Performance und Sicherheit
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/static") ||
-    pathname.startsWith("/studio") || // FIX: Studio Route ignorieren
-    // Regex für Dateien mit Endung (z.B. .png, .css, .ico)
-    /.*\.[^/]+$/.test(pathname)
+    pathname.startsWith("/studio") ||
+    // Ignoriere typische Dateiendungen für Bilder/Fonts/etc.
+    /\.(png|jpg|jpeg|svg|gif|webp|ico|css|js|woff|woff2|ttf|eot|mp4|webm)$/i.test(
+      pathname
+    )
   ) {
     return;
   }
@@ -43,11 +44,10 @@ export function middleware(request: NextRequest) {
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
 
-  // 308 Permanent Redirect ist besser für SEO als 307 (Standard)
   return NextResponse.redirect(request.nextUrl);
 }
 
 export const config = {
-  // Matcher: Fängt alles ab, außer _next, api und Dateien mit Punkt
-  matcher: ["/((?!_next|api|.*\\..*).*)"],
+  // Matcher: Fängt alles ab, außer interne Pfade
+  matcher: ["/((?!_next|api|studio|static|.*\\..*).*)"],
 };

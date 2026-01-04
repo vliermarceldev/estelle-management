@@ -5,7 +5,7 @@ import Link from "next/link";
 interface ModelCardProps {
   slug: string;
   name: string;
-  handle: string;
+  handle?: string;
   img: string;
   blurDataUrl?: string;
 }
@@ -24,7 +24,7 @@ export const ModelCard = ({
   return (
     <Link
       href={`/models/${slug}`}
-      scroll={false}
+      // scroll={false} entfernt für besseres UX (Start oben bei neuer Seite)
       className="group flex flex-col items-center cursor-pointer block"
     >
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-zinc-100 dark:bg-zinc-900 mb-4 rounded-sm">
@@ -32,12 +32,11 @@ export const ModelCard = ({
           src={img}
           alt={`Model ${name} - Estelle Management`}
           fill
-          // Optimierte Sizes für Mobile (1 Spalte), Tablet (2 Spalten), Desktop (4 Spalten)
           sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           placeholder={blurDataUrl ? "blur" : "empty"}
           blurDataURL={blurDataUrl}
-          quality={80} // Etwas höhere Qualität für Model-Bilder
+          quality={80}
         />
       </div>
 
@@ -48,6 +47,11 @@ export const ModelCard = ({
             {lastName}
           </span>
         </h3>
+        {handle && (
+          <p className="text-xs text-zinc-400 mt-1 tracking-wider uppercase">
+            {handle}
+          </p>
+        )}
       </div>
     </Link>
   );
